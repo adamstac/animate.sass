@@ -1,1 +1,1 @@
-rvm ruby-1.9.2@animate --create
+rvm ruby-1.9.2@animate.sass --create
