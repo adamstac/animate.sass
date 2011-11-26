@@ -2039,9 +2039,9 @@
 }
 
 .foo {
-  -webkit-animation: fadeIn 5s ease 2s 1 normal;
-  -moz-animation: fadeIn 5s ease 2s 1 normal;
-  animation: fadeIn 5s ease 2s 1 normal;
+  -webkit-animation: fadeIn 10s ease 0.2s 1 normal;
+  -moz-animation: fadeIn 10s ease 0.2s 1 normal;
+  animation: fadeIn 10s ease 0.2s 1 normal;
   margin: 0 auto;
   width: 400px;
 }
