@@ -1,18 +1,26 @@
-# Compass Extension Bootstrap
+# Animate.sass
 
-A simple starting point for creating Compass extensions.
+Animate.sass is a Sass and Compass CSS animations library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
+
+The core of Animate.sass, despite being named "dot sass", is written in [SCSS](http://en.wikipedia.org/wiki/Scss). Don't hate.
 
 ## Installation
 
-...
+1. `gem install animate-sass`
+2. Add `require 'animate-sass'` in Compass's `config.rb` file
+3. Then `@import animate-sass`
 
 ## Usage
 
-...
+The usage is simple, `@import animate-sass` and have fun. Thus far, Animate.sass is for development only and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
+
+## Credits and special thanks
+
+Special thanks to [theCSSguru](https://twitter.com/theCSSguru) for the kickstart on this project. He has [a page out there](http://thecssguru.freeiz.com/animate/) linking to a simple Sass conversion of Animate.css, but I wanted to do more with it for myself as well as the Sass community. Since it wasn't hosted on GitHub, I took the liberty to start Animate.sass and begin carving it out.
 
 ## License
 
-Copyright (c) 2009-2011 Adam Stacoviak
+Copyright (c) 2011 Adam Stacoviak
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
