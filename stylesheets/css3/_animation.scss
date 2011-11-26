@@ -106,7 +106,7 @@
           animation-delay: $full;
 }
 
-// -webkit-animation-fill-mode - http://goo.gl/l6ckm
+// animation-fill-mode - http://dev.w3.org/csswg/css3-animations/#the-animation-fill-mode-property-
 @mixin animation-fill-mode(
   $mode-1: none,
   $mode-2: false, $mode-3: false, $mode-4: false, $mode-5: false, $mode-6: false, $mode-7: false, $mode-8: false, $mode-9: false
