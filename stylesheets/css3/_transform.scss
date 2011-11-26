@@ -1,0 +1,74 @@
+// Declariation mixin to make it easy to write a declaration with or without a prefix
+@mixin declaration($property, $value, $prefix: none) {
+  $prefix: unquote($prefix);
+  @if $prefix {
+    #{-$prefix}-#{$property}: $value;
+  }
+  @else {
+    $property: $value;
+  }
+}
+
+// transform - https://developer.mozilla.org/en/CSS/transform
+// none | <transform-function>
+
+@mixin transform($value: none, $prefix: none) {
+
+  // Web standard
+  @if $prefix == none { transform: $value; }
+
+  // -webkit
+  @else if $prefix == webkit { @include declaration(transform, $value, $prefix); }
+  
+  // -moz
+  @else if $prefix == moz { @include declaration(transform, $value, $prefix); }
+
+  // -ms
+  @else if $prefix == ms { @include declaration(transform, $value, $prefix); }
+
+  // -o
+  @else if $prefix == o { @include declaration(transform, $value, $prefix); }
+  
+  // Else all
+  @else {
+    @include declaration(transform, $value, $prefix: webkit);
+    @include declaration(transform, $value, $prefix: moz);
+    @include declaration(transform, $value, $prefix: ms);
+    @include declaration(transform, $value, $prefix: o);
+    transform: $value;
+  }
+
+}
+
+// transform-origin - https://developer.mozilla.org/en/CSS/transform-origin
+// x-axis - left | center | right  | length | %
+// y-axis - top  | center | bottom | length | %
+// z-axis -                          length
+
+@mixin transform-origin($value: 50%, $prefix: none) {
+
+  // Web standard
+  @if $prefix == none { transform-origin: $value; }
+  
+  // -webkit
+  @else if $prefix == webkit { @include declaration(transform-origin, $value, $prefix); }
+
+  // -moz
+  @else if $prefix == moz { @include declaration(transform-origin, $value, $prefix); }
+
+  // -ms
+  @else if $prefix == ms { @include declaration(transform-origin, $value, $prefix); }
+
+  // -o
+  @else if $prefix == o { @include declaration(transform-origin, $value, $prefix); }
+
+  // Else all
+  @else {
+    @include declaration(transform-origin, $value, $prefix: webkit);
+    @include declaration(transform-origin, $value, $prefix: moz);
+    @include declaration(transform-origin, $value, $prefix: ms);
+    @include declaration(transform-origin, $value, $prefix: o);
+    transform-origin: $value;
+  }
+
+}

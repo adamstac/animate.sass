@@ -1,0 +1,12 @@
+// Compass
+@import "compass";
+
+// CSS Reset
+// @import "compass/reset";
+
+@import "../../stylesheets/animate";
+
+.foo {
+  @include animate(fadeIn, 5s, 0.5s);
+  // @include animation-basic((slideUp, fadeIn), (1.0s, 2.0s), ease-in);
+}

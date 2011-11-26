@@ -1,0 +1,71 @@
+# Serve Bootstrap
+
+## A simple Serve starting point
+
+This is a simple HTML prototype written in HAML that is designed to be viewed with Serve.
+
+Supports:
+
+* [Haml](http://haml-lang.com/)
+* [Sass](http://sass-lang.com/)
+* [Compass](https://github.com/chriseppstein/compass)
+* [Grid Coordinates](https://github.com/adamstac/grid-coordinates)
+* [jQuery](http://jquery.com/)
+* [Modernizr](http://www.modernizr.com/)
+
+## What is Serve?
+
+[Serve](https://github.com/jlong/serve) is a rapid prototyping framework for Ruby or Rails-based applications. It is designed to compliment the Rails development setup and enforce a strict separation of concerns between designer and developer. Using Serve with Rails allows the designer to happily work in his own space creating an HTML prototype of the application, while the developer works on the Rails application and copies over the views from the prototype as needed. This allows the designer to focus on presentation and flow while the developer can focus on the implementation.
+
+## How do I get started?
+
+Serve is distributed as a gem to make it easy to get up and running. This project uses [Bundler](http://gembundler.com/) for gem management.
+
+If you don't have Bundler installed, run the following at the command prompt:
+
+    gem install bundler
+
+Now, to get started with using Serve and this Serve Bootstrap, fork the repo and pull down a copy to your local machine. It makes sense to store this where you store your other codes, for example:
+
+    cd Code/path/to/codes
+    git clone git@github.com:USERNAME/serve-bootstrap.git
+
+From inside the root of your newly cloned repo, run the following at the command prompt:
+
+    bundle install
+
+After you've ran `bundle install` and Serve is installed, as well as the other required gems, you can start it up like this:
+
+    serve
+
+This will start Serve on port 4000 and will now be able to view your working prototype in your web browser at this URL: [http://localhost:4000](http://localhost:4000)
+
+Click around. You will find that Serve enables you to prototype most functionality without writing a single line of backend code.
+
+## Helper Rake Tasks
+
+There are a few helper Rake tasks that will aid you in clearing and compiling your Sass/Compass stylesheets. There is also a task to generate a new project at a specified directory so you can keep your copy of the Serve Bootstrap pristine.
+
+    rake -T
+
+    rake generate                   # Generate a new project at dir=foo
+    rake styles:clear               # Clear the styles
+    rake styles:compile             # Compile new styles
+    rake styles:compile:production  # Compile new styles for production
+    rake styles:stats               # Run compass stats
+    rake styles:stats:log           # Create a log of compass stats
+
+## Rack and Passenger
+
+Astute users may notice that this project is also a simple Rack application. This means that it is easy to deploy it on Passenger or rack it up with the `rackup` command. For more information about using Serve and Passenger read "[Racking Up A Serve Project On Phusion Passenger](http://wiseheartdesign.com/articles/2010/05/26/racking-up-a-serve-project-on-phusion-passenger/)".
+
+
+## License
+
+Copyright (c) 2011 Adam Stacoviak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

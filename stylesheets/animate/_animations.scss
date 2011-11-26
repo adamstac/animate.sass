@@ -1,0 +1,687 @@
+@mixin fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn { @include fadeIn; }
+   @-moz-keyframes fadeIn { @include fadeIn; }
+        @keyframes fadeIn { @include fadeIn; }
+
+@mixin fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeOut { @include fadeOut; }
+   @-moz-keyframes fadeOut { @include fadeOut; }
+        @keyframes fadeOut { @include fadeOut; }
+
+@mixin fadeInUp($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(20px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInUp { @include fadeInUp(webkit); }
+   @-moz-keyframes fadeInUp { @include fadeInUp(moz); }
+        @keyframes fadeInUp { @include fadeInUp(none); }
+
+@mixin fadeOutUp($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(-20px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutUp { @include fadeOutUp(webkit); }
+   @-moz-keyframes fadeOutUp { @include fadeOutUp(moz); }
+        @keyframes fadeOutUp { @include fadeOutUp(none); }
+
+@mixin fadeInDown($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-20px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInDown { @include fadeInDown(webkit); }
+   @-moz-keyframes fadeInDown { @include fadeInDown(moz); }
+        @keyframes fadeInDown { @include fadeInDown(none); }
+
+@mixin fadeOutDown($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(20px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutDown { @include fadeOutDown(webkit); }
+   @-moz-keyframes fadeOutDown { @include fadeOutDown(moz); }
+        @keyframes fadeOutDown { @include fadeOutDown(none); }
+
+@mixin fadeInRight($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(20px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInRight { @include fadeInRight(webkit); }
+   @-moz-keyframes fadeInRight { @include fadeInRight(moz); }
+        @keyframes fadeInRight { @include fadeInRight(none); }
+
+@mixin fadeOutLeft($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-20px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutLeft { @include fadeOutLeft(webkit); }
+   @-moz-keyframes fadeOutLeft { @include fadeOutLeft(moz); }
+        @keyframes fadeOutLeft { @include fadeOutLeft(none); }
+
+@mixin fadeInLeft($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-20px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInLeft { @include fadeInLeft(webkit); }
+   @-moz-keyframes fadeInLeft { @include fadeInLeft(moz); }
+        @keyframes fadeInLeft { @include fadeInLeft(none); }
+
+@mixin fadeOutRight($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(20px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutRight { @include fadeOutRight(webkit); }
+   @-moz-keyframes fadeOutRight { @include fadeOutRight(moz); }
+        @keyframes fadeOutRight { @include fadeOutRight(none); }
+
+@mixin fadeInUpBig($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(2000px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInUpBig { @include fadeInUpBig(webkit); }
+   @-moz-keyframes fadeInUpBig { @include fadeInUpBig(moz); }
+        @keyframes fadeInUpBig { @include fadeInUpBig(none); }
+
+@mixin fadeOutUpBig($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(-2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutUpBig { @include fadeOutUpBig(webkit); }
+   @-moz-keyframes fadeOutUpBig { @include fadeOutUpBig(moz); }
+        @keyframes fadeOutUpBig { @include fadeOutUpBig(none); }
+
+@mixin fadeInDownBig($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-2000px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInDownBig { @include fadeInDownBig(webkit); }
+   @-moz-keyframes fadeInDownBig { @include fadeInDownBig(moz); }
+        @keyframes fadeInDownBig { @include fadeInDownBig(none); }
+
+@mixin fadeOutDownBig($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutDownBig { @include fadeOutDownBig(webkit); }
+   @-moz-keyframes fadeOutDownBig { @include fadeOutDownBig(moz); }
+        @keyframes fadeOutDownBig { @include fadeOutDownBig(none); }
+
+@mixin fadeInRightBig($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(2000px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInRightBig { @include fadeInRightBig(webkit); }
+   @-moz-keyframes fadeInRightBig { @include fadeInRightBig(moz); }
+        @keyframes fadeInRightBig { @include fadeInRightBig(none); }
+
+@mixin fadeOutLeftBig($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutLeftBig { @include fadeOutLeftBig(webkit); }
+   @-moz-keyframes fadeOutLeftBig { @include fadeOutLeftBig(moz); }
+        @keyframes fadeOutLeftBig { @include fadeOutLeftBig(none); }
+
+@mixin fadeInLeftBig($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-2000px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeInLeftBig { @include fadeInLeftBig(webkit); }
+   @-moz-keyframes fadeInLeftBig { @include fadeInLeftBig(moz); }
+        @keyframes fadeInLeftBig { @include fadeInLeftBig(none); }
+
+@mixin fadeOutRightBig($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes fadeOutRightBig { @include fadeOutRightBig(webkit); }
+   @-moz-keyframes fadeOutRightBig { @include fadeOutRightBig(moz); }
+        @keyframes fadeOutRightBig { @include fadeOutRightBig(none); }
+
+@mixin bounceIn($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.3), $prefix);
+  }
+  50% {
+    opacity: 1;
+    @include transform(scale(1.05), $prefix);
+  }
+  70% {
+    @include transform(scale(0.9), $prefix);
+  }
+  100% {
+    @include transform(scale(1), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceIn { @include bounceIn(webkit); }
+   @-moz-keyframes bounceIn { @include bounceIn(moz); }
+        @keyframes bounceIn { @include bounceIn(none); }
+
+@mixin bounceInDown($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-2000px), $prefix);
+  }
+  60% {
+    opacity: 1;
+    @include transform(translateY(30px), $prefix);
+  }
+  80% {
+    @include transform(translateY(-10px), $prefix);
+  }
+  100% {
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceInDown { @include bounceInDown(webkit); }
+   @-moz-keyframes bounceInDown { @include bounceInDown(moz); }
+        @keyframes bounceInDown { @include bounceInDown(none); }
+
+@mixin bounceInUp($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(2000px), $prefix);
+  }
+  60% {
+    opacity: 1;
+    @include transform(translateY(-30px), $prefix);
+  }
+  80% {
+    @include transform(translateY(10px), $prefix);
+  }
+  100% {
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceInUp { @include bounceInUp(webkit); }
+   @-moz-keyframes bounceInUp { @include bounceInUp(moz); }
+        @keyframes bounceInUp { @include bounceInUp(none); }
+
+@mixin bounceInRight($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(2000px), $prefix);
+  }
+  60% {
+    opacity: 1;
+    @include transform(translateX(-30px), $prefix);
+  }
+  80% {
+    @include transform(translateX(10px), $prefix);
+  }
+  100% {
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceInRight { @include bounceInRight(webkit); }
+   @-moz-keyframes bounceInRight { @include bounceInRight(moz); }
+        @keyframes bounceInRight { @include bounceInRight(none); }
+
+@mixin bounceInLeft($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-2000px), $prefix);
+  }
+  60% {
+    opacity: 1;
+    @include transform(translateX(30px), $prefix);
+  }
+  80% {
+    @include transform(translateX(-10px), $prefix);
+  }
+  100% {
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceInLeft { @include bounceInLeft(webkit); }
+   @-moz-keyframes bounceInLeft { @include bounceInLeft(moz); }
+        @keyframes bounceInLeft { @include bounceInLeft(none); }
+
+@mixin bounceOut($prefix) {
+  0% {
+    @include transform(scale(1), $prefix);
+  }
+  25% {
+    @include transform(scale(0.95), $prefix);
+  }
+  50% {
+    opacity: 1;
+    @include transform(scale(1.1), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale(0.3), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceOut { @include bounceOut(webkit); }
+   @-moz-keyframes bounceOut { @include bounceOut(moz); }
+        @keyframes bounceOut { @include bounceOut(none); }
+
+@mixin bounceOutUp($prefix) {
+  0% {
+    @include transform(translateY(0), $prefix);
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateY(20px), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(-2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceOutUp { @include bounceOutUp(webkit); }
+   @-moz-keyframes bounceOutUp { @include bounceOutUp(moz); }
+        @keyframes bounceOutUp { @include bounceOutUp(none); }
+
+@mixin bounceOutDown($prefix) {
+  0% {
+    @include transform(translateY(0), $prefix);
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateY(-20px), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceOutDown { @include bounceOutDown(webkit); }
+   @-moz-keyframes bounceOutDown { @include bounceOutDown(moz); }
+        @keyframes bounceOutDown { @include bounceOutDown(none); }
+
+@mixin bounceOutLeft($prefix) {
+  0% {
+    @include transform(translateX(0), $prefix);
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(20px), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceOutLeft { @include bounceOutLeft(webkit); }
+   @-moz-keyframes bounceOutLeft { @include bounceOutLeft(moz); }
+        @keyframes bounceOutLeft { @include bounceOutLeft(none); }
+
+@mixin bounceOutRight($prefix) {
+  0% {
+    @include transform(translateX(0), $prefix);
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(-20px), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(2000px), $prefix);
+  }
+}
+
+@-webkit-keyframes bounceOutRight { @include bounceOutRight(webkit); }
+   @-moz-keyframes bounceOutRight { @include bounceOutRight(moz); }
+        @keyframes bounceOutRight { @include bounceOutRight(none); }
+
+@mixin flash {
+  0%   { opacity: 1; }
+  25%  { opacity: 0; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes flash { @include flash; }
+   @-moz-keyframes flash { @include flash; }
+        @keyframes flash { @include flash; }
+
+@mixin bounce($prefix) {
+  0%   { @include transform(translateY(0), $prefix); }
+  20%  { @include transform(translateY(0), $prefix); }
+  40%  { @include transform(translateY(-30px), $prefix); }
+  50%  { @include transform(translateY(0), $prefix); }
+  60%  { @include transform(translateY(-15px), $prefix); }
+  80%  { @include transform(translateY(0), $prefix); }
+  100% { @include transform(translateY(0), $prefix); }
+}
+
+@-webkit-keyframes bounce { @include bounce(webkit); }
+   @-moz-keyframes bounce { @include bounce(moz); }
+        @keyframes bounce { @include bounce(none); }
+
+@mixin shake($prefix) {
+  0%   { @include transform(translateX(0), $prefix); }
+  10%  { @include transform(translateX(-10px), $prefix); }
+  20%  { @include transform(translateX(10px), $prefix); }
+  30%  { @include transform(translateX(-10px), $prefix); }
+  40%  { @include transform(translateX(10px), $prefix); }
+  50%  { @include transform(translateX(-10px), $prefix); }
+  60%  { @include transform(translateX(10px), $prefix); }
+  70%  { @include transform(translateX(-10px), $prefix); }
+  80%  { @include transform(translateX(10px), $prefix); }
+  90%  { @include transform(translateX(-10px), $prefix); }
+  100% { @include transform(translateX(0), $prefix); }
+}
+
+@-webkit-keyframes shake { @include shake(webkit); }
+   @-moz-keyframes shake { @include shake(moz); }
+        @keyframes shake { @include shake(none); }
+
+@mixin rotateInDownLeft($prefix) {
+  0% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(-90deg), $prefix);
+    opacity: 0;
+  }
+  100% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateInDownLeft { @include rotateInDownLeft(webkit); }
+   @-moz-keyframes rotateInDownLeft { @include rotateInDownLeft(moz); }
+        @keyframes rotateInDownLeft { @include rotateInDownLeft(none); }
+
+@mixin rotateInUpLeft($prefix) {
+  0% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(90deg), $prefix);
+    opacity: 0;
+  }
+  100% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateInUpLeft { @include rotateInUpLeft(webkit); }
+   @-moz-keyframes rotateInUpLeft { @include rotateInUpLeft(moz); }
+        @keyframes rotateInUpLeft { @include rotateInUpLeft(none); }
+
+@mixin rotateInUpRight($prefix) {
+  0% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(-90deg), $prefix);
+    opacity: 0;
+  }
+  100% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateInUpRight { @include rotateInUpRight(webkit); }
+   @-moz-keyframes rotateInUpRight { @include rotateInUpRight(moz); }
+        @keyframes rotateInUpRight { @include rotateInUpRight(none); }
+
+@mixin rotateInDownRight($prefix) {
+  0% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(90deg), $prefix);
+    opacity: 0;
+  }
+  100% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateInDownRight { @include rotateInDownRight(webkit); }
+   @-moz-keyframes rotateInDownRight { @include rotateInDownRight(moz); }
+        @keyframes rotateInDownRight { @include rotateInDownRight(none); }
+
+@mixin rotateOutDownLeft($prefix) {
+  0% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+  100% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(90deg), $prefix);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateOutDownLeft { @include rotateOutDownLeft(webkit); }
+   @-moz-keyframes rotateOutDownLeft { @include rotateOutDownLeft(moz); }
+        @keyframes rotateOutDownLeft { @include rotateOutDownLeft(none); }
+
+@mixin rotateOutUpLeft($prefix) {
+  0% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+  100% {
+    @include transform-origin(left bottom, $prefix);
+    @include transform(rotate(-90deg), $prefix);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateOutUpLeft { @include rotateOutUpLeft(webkit); }
+   @-moz-keyframes rotateOutUpLeft { @include rotateOutUpLeft(moz); }
+        @keyframes rotateOutUpLeft { @include rotateOutUpLeft(none); }
+
+@mixin rotateOutDownRight($prefix) {
+  0% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+  100% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(-90deg), $prefix);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateOutDownRight { @include rotateOutDownRight(webkit); }
+   @-moz-keyframes rotateOutDownRight { @include rotateOutDownRight(moz); }
+        @keyframes rotateOutDownRight { @include rotateOutDownRight(none); }
+
+@mixin rotateOutUpRight($prefix) {
+  0% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+  100% {
+    @include transform-origin(right bottom, $prefix);
+    @include transform(rotate(90deg), $prefix);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateOutUpRight { @include rotateOutUpRight(webkit); }
+   @-moz-keyframes rotateOutUpRight { @include rotateOutUpRight(moz); }
+        @keyframes rotateOutUpRight { @include rotateOutUpRight(none); }
+
+@mixin rotateIn($prefix) {
+  0% {
+    @include transform-origin(center center, $prefix);
+    @include transform(rotate(-200deg), $prefix);
+    opacity: 0;
+  }
+  100% {
+    @include transform-origin(center center, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateIn { @include rotateIn(webkit); }
+   @-moz-keyframes rotateIn { @include rotateIn(moz); }
+        @keyframes rotateIn { @include rotateIn(none); }
+
+@mixin rotateOut($prefix) {
+  0% {
+    @include transform-origin(center center, $prefix);
+    @include transform(rotate(0), $prefix);
+    opacity: 1;
+  }
+  100% {
+    @include transform-origin(center center, $prefix);
+    @include transform(rotate(200deg), $prefix);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateOut { @include rotateOut(webkit); }
+   @-moz-keyframes rotateOut { @include rotateOut(moz); }
+        @keyframes rotateOut { @include rotateOut(none); }
+
+@mixin tada($prefix) {
+  0%   { @include transform(scale(1), $prefix); }
+  10%  { @include transform(scale(0.9) rotate(-3deg), $prefix); }
+  20%  { @include transform(scale(0.9) rotate(-3deg), $prefix); }
+  30%  { @include transform(scale(1.1) rotate(3deg), $prefix); }
+  40%  { @include transform(scale(1.1) rotate(-3deg), $prefix); }
+  50%  { @include transform(scale(1.1) rotate(3deg), $prefix); }
+  60%  { @include transform(scale(1.1) rotate(-3deg), $prefix); }
+  70%  { @include transform(scale(1.1) rotate(3deg), $prefix); }
+  80%  { @include transform(scale(1.1) rotate(-3deg), $prefix); }
+  90%  { @include transform(scale(1.1) rotate(3deg), $prefix); }
+  100% { @include transform(scale(1)   rotate(0), $prefix); }
+}
+
+@-webkit-keyframes tada { @include tada(webkit); }
+   @-moz-keyframes tada { @include tada(moz); }
+        @keyframes tada { @include tada(none); }
