@@ -1,0 +1,10 @@
+// Declariation mixin to make it easy to write a declaration with or without a prefix
+@mixin declaration($property, $value, $prefix: none) {
+  $prefix: unquote($prefix);
+  @if $prefix {
+    #{-$prefix}-#{$property}: $value;
+  }
+  @else {
+    $property: $value;
+  }
+}

@@ -1,8 +1,6 @@
-// Animate mixin
+// The goods.
+@import "helpers";
 @import "css3";
 
-@mixin animate($name: fadeIn, $duration: 1s, $delay: 0.2s, $function: ease, $mode: both) {
-  @include experimental(animation, $name $duration $delay $function $mode);
-}
-
+// The animations.
 @import "animate/animations";

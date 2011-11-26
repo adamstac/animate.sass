@@ -2039,12 +2039,9 @@
 }
 
 .foo {
-  -moz-animation: fadeIn 5s 0.5s ease both;
-  -webkit-animation: fadeIn 5s 0.5s ease both;
-  -o-animation: fadeIn 5s 0.5s ease both;
-  -ms-animation: fadeIn 5s 0.5s ease both;
-  -khtml-animation: fadeIn 5s 0.5s ease both;
-  animation: fadeIn 5s 0.5s ease both;
+  -webkit-animation: fadeIn 5s ease 2s 1 normal;
+  -moz-animation: fadeIn 5s ease 2s 1 normal;
+  animation: fadeIn 5s ease 2s 1 normal;
   margin: 0 auto;
   width: 400px;
 }
@@ -2053,9 +2050,23 @@
   -webkit-animation-name: bounceIn, fadeIn;
   -moz-animation-name: bounceIn, fadeIn;
   animation-name: bounceIn, fadeIn;
-  -webkit-animation-duration: 2s, 0.5s;
-  -moz-animation-duration: 2s, 0.5s;
-  animation-duration: 2s, 0.5s;
+  -webkit-animation-duration: 2s, 5s;
+  -moz-animation-duration: 2s, 5s;
+  animation-duration: 2s, 5s;
+  -webkit-animation-timing-function: ease, ease;
+  -moz-animation-timing-function: ease, ease;
+  animation-timing-function: ease, ease;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.baz {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-timing-function: ease;
   -moz-animation-timing-function: ease;
   animation-timing-function: ease;
