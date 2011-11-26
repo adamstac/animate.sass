@@ -2045,4 +2045,20 @@
   -ms-animation: fadeIn 5s 0.5s ease both;
   -khtml-animation: fadeIn 5s 0.5s ease both;
   animation: fadeIn 5s 0.5s ease both;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.bar {
+  -webkit-animation-name: bounceIn, fadeIn;
+  -moz-animation-name: bounceIn, fadeIn;
+  animation-name: bounceIn, fadeIn;
+  -webkit-animation-duration: 2s, 0.5s;
+  -moz-animation-duration: 2s, 0.5s;
+  animation-duration: 2s, 0.5s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  margin: 0 auto;
+  width: 400px;
 }

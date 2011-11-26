@@ -4,9 +4,16 @@
 // CSS Reset
 // @import "compass/reset";
 
-@import "../../stylesheets/animate";
+@import "../../stylesheets/animate-sass";
 
 .foo {
   @include animate(fadeIn, 5s, 0.5s);
-  // @include animation-basic((slideUp, fadeIn), (1.0s, 2.0s), ease-in);
+  margin: 0 auto;
+  width: 400px;
+}
+
+.bar {
+  @include animation-basic((bounceIn, fadeIn), (2.0s, 0.5s));
+  margin: 0 auto;
+  width: 400px;
 }
