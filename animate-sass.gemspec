@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
 
   # Gem author details
   s.name = "animate-sass"
-  s.summary = %q{Sass and Compass CSS animations library for WebKit, Firefox and beyond, based on Animate.css} # one-liner
-  s.description = %q{Animate.sass is a Sass and Compass CSS animations library for WebKit, Firefox and beyond based on the work being done in Animate.css} # long-form
+  s.summary = %q{Sass and Compass CSS animation library for WebKit, Firefox and beyond, based on Animate.css} # one-liner
+  s.description = %q{Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done in Animate.css} # long-form
   s.authors = ["Adam Stacoviak"]
   s.email = ["adam@stacoviak.com"]
   s.homepage = "https://github.com/adamstac/animate.sass"
