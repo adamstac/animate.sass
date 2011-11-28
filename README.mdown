@@ -1,6 +1,6 @@
 # Animate.sass
 
-Animate.sass is a Sass and Compass CSS animations library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
+Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
 
 The core of Animate.sass, despite being named "dot sass", is written in [SCSS](http://en.wikipedia.org/wiki/Scss). Don't hate.
 
@@ -12,11 +12,17 @@ The core of Animate.sass, despite being named "dot sass", is written in [SCSS](h
 
 ## Usage
 
-The usage is simple, `@import animate-sass` and have fun. Thus far, Animate.sass is for development only and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
+The usage is simple, `@import animate.sass` and have fun. All Animate.css animations are supported.
+
+Usage examples and documentation are in the works, but until then, check out the test project for help. Animate.sass is still in development and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
 
 ## Credits and special thanks
 
-Special thanks to [theCSSguru](https://twitter.com/theCSSguru) for kickstarting a Sass port of Animate.css. He has [a page out there](http://thecssguru.freeiz.com/animate/) linking to a simple Sass conversion of Animate.css, but I wanted to do a lot more with it for the Sass community. Since it wasn't hosted on GitHub, I took the liberty to start Animate.sass and begin carving it out.
+Huge thanks to [Dan Eden](https://github.com/daneden) on his project [Animate.css](http://daneden.me/animate/). This project would not exist without his hard work.
+
+Also thanks to Nick Pettit for his CSS3 animation library [Glide](https://github.com/nickpettit/glide).
+
+Also, I want to thank [theCSSguru](https://twitter.com/theCSSguru) for kickstarting a Sass port of Animate.css. He has [a page out there](http://thecssguru.freeiz.com/animate/) linking to a simple Sass conversion of Animate.css, but I wanted to do a lot more with it for the Sass community. Since it wasn't hosted on GitHub, I took the liberty to start Animate.sass and begin carving it out.
 
 ## License
 
