@@ -8,13 +8,32 @@ The core of Animate.sass, despite being named "dot sass", is written in [SCSS](h
 
 1. `gem install animate-sass`
 2. Add `require 'animate-sass'` in Compass's `config.rb` file
-3. Then `@import animate.sass`
+3. Then `@import animate.sass` (all animations)
 
 ## Usage
 
-The usage is simple, `@import animate.sass` and have fun. All Animate.css animations are supported.
+The usage is simple, `@import animate.sass` (loads all animations) and have fun. All Animate.css animations are supported.
 
 Usage examples and documentation are in the works, but until then, check out the test project for help. Animate.sass is still in development and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
+
+### Animations, a la carte ...
+
+You may not want to load the full stack of animations from animate.sass, which emits over 5000+ lines of CSS. Instead you would like to pull in just a few animations or even a particular animation family. If that's the case, here's how to do that.
+
+Rather than `@import animate.sass` (all animations), do this ...
+
+First you need to import what's shared between all animations, `@import animate/shared`. Then you'll be able to import a full animation family or individual animations.
+
+For example, if you wanted to use all the animations from the attention seekers animation family, and a few from the flippers animation family, here's what you'd do.
+
+    // Animate.sass shared stuffs
+    @import animate/shared
+    
+    // Animate.sass animation families and individual animations
+    @import animate/animations/attention-seekers
+    @import animate/animations/flippers/flip
+    @import animate/animations/flippers/flipInX
+    @import animate/animations/flippers/flipOutX
 
 ## Credits and special thanks
 

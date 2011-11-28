@@ -13,7 +13,16 @@ $experimental-support-for-khtml: false;
 // Font Stacks
 @import "font-stacks";
 
+// Full animate.sass
 @import "../../stylesheets/animate.sass";
+
+// Parts version test
+// @import "../../stylesheets/animate/shared";
+// @import "../../stylesheets/animate/shared";
+// @import "../../stylesheets/animate/animations/attention-seekers";
+// @import "../../stylesheets/animate/animations/flippers/flip";
+// @import "../../stylesheets/animate/animations/flippers/flipInX";
+// @import "../../stylesheets/animate/animations/flippers/flipOutX";
 
 body {
   font-family: ff("Helvetica Neue");

@@ -1,3 +1,9 @@
+# 0.1.1
+
+* [NEW] Enabled individual animation and animation family usage (not required to load the full stack)
+* [CHANGED] Moved all parts to /animate
+* [CHANGED] Renamed /helpers to /utilities
+
 # 0.1.0
 
 * Initial version ready for development and testing
