@@ -1,7 +1,132 @@
 - @title = "Compass Extension"
 
-.foo
-  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#stage
+  #object
+    Animate.sass
 
-.bar
-  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#content
+  %dl#animations
+    %dt Attention seekers
+
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flash');") flash
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounce');") bounce
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('shake');") shake
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('tada');") tada
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('swing');") swing
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('wobble');") wobble
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('pulse');") pulse
+
+    %dt Flippers
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flip');") flip
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flipInX');") flipInX
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flipOutX');") flipOutX
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flipInY');") flipInY
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('flipOutY');") flipOutY
+
+    %dt Fading entrances
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeIn');") fadeIn
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInUp');") fadeInUp
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInDown');") fadeInDown
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInLeft');") fadeInLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInRight');") fadeInRight
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInUpBig');") fadeInUpBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInDownBig');") fadeInDownBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInLeftBig');") fadeInLeftBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeInRightBig');") fadeInRightBig
+
+    %dt Fading exits
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOut');") fadeOut
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutUp');") fadeOutUp
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutDown');") fadeOutDown
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutLeft');") fadeOutLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutRight');") fadeOutRight
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutUpBig');") fadeOutUpBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutDownBig');") fadeOutDownBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutLeftBig');") fadeOutLeftBig
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('fadeOutRightBig');") fadeOutRightBig
+
+    %dt Bouncing entrances
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceIn');") bounceIn
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceInUp');") bounceInUp
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceInDown');") bounceInDown
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceInLeft');") bounceInLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceInRight');") bounceInRight
+
+    %dt Bouncing exits
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceOut');") bounceOut
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceOutUp');") bounceOutUp
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceOutDown');") bounceOutDown
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceOutLeft');") bounceOutLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('bounceOutRight');") bounceOutRight
+
+    %dt Rotating entrances
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateIn');") rotateIn
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateInDownLeft');") rotateInDownLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateInDownRight');") rotateInDownRight
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateInUpLeft');") rotateInUpLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateInUpRight');") rotateInUpRight
+
+    %dt Rotating exits
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateOut');") rotateOut
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateOutDownLeft');") rotateOutDownLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateOutDownRight');") rotateOutDownRight
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateOutUpLeft');") rotateOutUpLeft
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rotateOutUpRight');") rotateOutUpRight
+
+    %dt Specials
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('hinge');") hinge
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rollIn');") rollIn
+    %dd
+      %a(href="#" onclick="$('#object').removeClass().addClass('rollOut');") rollOut

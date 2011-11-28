@@ -1,0 +1,18 @@
+// animation-name - http://www.w3.org/TR/css3-animations/#the-animation-name-property-
+@mixin animation-name(
+  $name-1,
+  $name-2: false, $name-3: false, $name-4: false, $name-5: false, $name-6: false, $name-7: false, $name-8: false, $name-9: false,
+  $prefix: false
+  ) {
+
+  $full: compact($name-1, $name-2, $name-3, $name-4, $name-5, $name-6, $name-7, $name-8, $name-9);
+  $value: $full;
+
+  // none | animation-name
+  @if $prefix {
+    @include declaration(animation-name, $value, $prefix);
+  } @else {
+    @include experimental(animation-name, $value);
+  }
+          
+}

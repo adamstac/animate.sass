@@ -1,0 +1,31 @@
+@mixin fadeOutLeftBig($prefix) {
+  0% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-2000px), $prefix);
+  }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes fadeOutLeftBig { @include fadeOutLeftBig(webkit); }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes fadeOutLeftBig { @include fadeOutLeftBig(khtml); }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes fadeOutLeftBig { @include fadeOutLeftBig(moz); }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes fadeOutLeftBig { @include fadeOutLeftBig(ms); }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes fadeOutLeftBig { @include fadeOutLeftBig(o); }
+}
+@keyframes fadeOutLeftBig { @include fadeOutLeftBig(none); }
+
+.fadeOutLeftBig {
+  @include animation-name(fadeOutLeftBig);
+}

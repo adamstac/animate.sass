@@ -1,0 +1,18 @@
+// animation-iteration-count - http://www.w3.org/TR/css3-animations/#the-animation-iteration-count-property-
+@mixin animation-iteration-count(
+  $value-1: 1,
+  $value-2: false, $value-3: false, $value-4: false, $value-5: false, $value-6: false, $value-7: false, $value-8: false, $value-9: false,
+  $prefix: false
+  ) {
+
+  $full: compact($value-1, $value-2, $value-3, $value-4, $value-5, $value-6, $value-7, $value-8, $value-9);
+  $value: $full;
+
+  // infinite | <number>
+  @if $prefix {
+    @include declaration(animation-iteration-count, $value, $prefix);
+  } @else {
+    @include experimental(animation-iteration-count, $value);
+  }
+
+}

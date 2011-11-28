@@ -1,0 +1,18 @@
+// animation-play-state - http://www.w3.org/TR/css3-animations/#the-animation-play-state-property-
+@mixin animation-play-state(
+  $state-1: running,
+  $state-2: false, $state-3: false, $state-4: false, $state-5: false, $state-6: false, $state-7: false, $state-8: false, $state-9: false,
+  $prefix: false
+  ) {
+
+  $full: compact($state-1, $state-2, $state-3, $state-4, $state-5, $state-6, $state-7, $state-8, $state-9);
+  $value: $full;
+
+  // running | paused
+  @if $prefix {
+    @include declaration(animation-play-state, $value, $prefix);
+  } @else {
+    @include experimental(animation-play-state, $value);
+  }
+
+}

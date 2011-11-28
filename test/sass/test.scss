@@ -1,0 +1,27 @@
+// Compass
+@import "compass";
+
+@import "../../stylesheets/animate.sass";
+
+.foo {
+  display: none;
+  @include animation(fadeIn, 10s, ease);
+  margin: 0 auto;
+  width: 400px;
+}
+
+.bar {
+  display: none;
+  @include animation-basic((bounceIn, fadeIn), (2.25s, 5.5s), (ease, ease-in));
+  margin: 0 auto;
+  width: 400px;
+}
+
+.baz {
+  display: none;
+  @include animation-name(fadeIn);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease);
+  margin: 0 auto;
+  width: 400px;
+}

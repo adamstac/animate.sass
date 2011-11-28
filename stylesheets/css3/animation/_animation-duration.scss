@@ -1,0 +1,17 @@
+// animation-duration - http://www.w3.org/TR/css3-animations/#the-animation-duration-property-
+@mixin animation-duration(
+  $time-1: 0,
+  $time-2: false, $time-3: false, $time-4: false, $time-5: false, $time-6: false, $time-7: false, $time-8: false, $time-9: false,
+  $prefix: false
+  ) {
+
+  $full: compact($time-1, $time-2, $time-3, $time-4, $time-5, $time-6, $time-7, $time-8, $time-9);
+  $value: $full;
+
+  // <time>
+  @if $prefix {
+    @include declaration(animation-duration, $value, $prefix);
+  } @else {
+    @include experimental(animation-duration, $value);
+  }
+}

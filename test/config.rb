@@ -1,5 +1,8 @@
 # Compass Configuration
 
+require 'grid-coordinates'
+require 'font-stacks'
+
 # HTTP paths
 http_path             = '/'
 http_stylesheets_path = '/stylesheets'

@@ -11,5 +11,7 @@ group :serve do
   gem 'serve', '~> 1.5.1'
   gem 'haml', '~> 3.1.3'
   gem 'css_parser', '~> 1.2.5'
+  gem 'grid-coordinates'
+  gem 'font-stacks'
   gem 'maruku', '~> 0.6.0'
 end

@@ -1,27 +1,74 @@
+// Compass 'experimental' variables
+$experimental-support-for-khtml: false;
+// $experimental-support-for-microsoft: false;
+// $experimental-support-for-opera: false;
+
 // Compass
 @import "compass";
+@import "compass/reset";
 
-// CSS Reset
-// @import "compass/reset";
+// Grid Coordinates
+@import "grid-coordinates";
 
-@import "../../stylesheets/animate-sass";
+// Font Stacks
+@import "font-stacks";
 
-.foo {
-  @include animation(fadeIn, 10s, ease);
-  margin: 0 auto;
-  width: 400px;
+@import "../../stylesheets/animate.sass";
+
+body {
+  font-family: ff("Helvetica Neue");
+  font-size: 16px;
 }
 
-.bar {
-  @include animation-basic((bounceIn, fadeIn), (2.0s, 5s), (ease ease));
-  margin: 0 auto;
-  width: 400px;
+#page {
+  @include grid-container;
+  padding-top: 40px;
 }
 
-.baz {
-  @include animation-name(fadeIn);
-  @include animation-duration(2s);
-  @include animation-timing-function(ease);
-  margin: 0 auto;
-  width: 400px;
+#stage {
+  @include grid(5);
+}
+
+#content {
+  @include grid(6);
+  @include grid-prefix(1);
+}
+
+#animations {
+  @include clearfix;
+  a {
+    color: #2C79BE;
+    text-decoration: none;
+  }
+  dt {
+    clear: both;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-top: 20px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  dd {
+    float: left;
+    line-height: 1.5;
+    margin-right: 30px;
+  }
+}
+
+#object {
+  // @include box-shadow(rgba(#000, 0.5) 0 0 10px);
+  background: #222;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 200px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: lowercase;
+  // Default animation
+  @include animation-duration(1.0s);
+  @include animation-delay(0.25s);
+  @include animation-timing-function(ease-in);
+  @include animation-fill-mode(both);
 }

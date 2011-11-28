@@ -1,0 +1,14 @@
+// animation-delay - http://www.w3.org/TR/css3-animations/#the-animation-delay-property-
+@mixin backface-visibility(
+  $value: visible,
+  $prefix: false
+  ) {
+
+  // <time>
+  @if $prefix {
+    @include declaration(backface-visibility, $value, $prefix);
+  } @else {
+    @include experimental(backface-visibility, $value);
+  }
+
+}

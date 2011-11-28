@@ -11,7 +11,11 @@ GEM
       sass (~> 3.1)
     css_parser (1.2.5)
       addressable
+    font-stacks (0.1.4)
+      compass (>= 0.11.5)
     fssm (0.2.7)
+    grid-coordinates (1.2.0)
+      compass (>= 0.11.5)
     haml (3.1.3)
     heroku (2.7.0)
       launchy (>= 0.3.2)
@@ -51,6 +55,8 @@ PLATFORMS
 DEPENDENCIES
   compass (~> 0.11.5)
   css_parser (~> 1.2.5)
+  font-stacks
+  grid-coordinates
   haml (~> 3.1.3)
   heroku
   maruku (~> 0.6.0)

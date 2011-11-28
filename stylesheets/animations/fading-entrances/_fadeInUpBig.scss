@@ -1,0 +1,31 @@
+@mixin fadeInUpBig($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(2000px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0), $prefix);
+  }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes fadeInUpBig { @include fadeInUpBig(webkit); }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes fadeInUpBig { @include fadeInUpBig(khtml); }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes fadeInUpBig { @include fadeInUpBig(moz); }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes fadeInUpBig { @include fadeInUpBig(ms); }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes fadeInUpBig { @include fadeInUpBig(o); }
+}
+@keyframes fadeInUpBig { @include fadeInUpBig(none); }
+
+.fadeInUpBig {
+  @include animation-name(fadeInUpBig);
+}
