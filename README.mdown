@@ -37,9 +37,9 @@ For example, if you wanted to use all the animations from the attention seekers 
 
 ## Credits and special thanks
 
-Huge thanks to [Dan Eden](https://github.com/daneden) on his project [Animate.css](http://daneden.me/animate/). This project would not exist without his hard work.
+Huge thanks to [Dan Eden](https://github.com/daneden) on his project [Animate.css](http://daneden.me/animate/). This project would not exist without his hard work. Thanks as well to Nick Pettit for his CSS3 animation library [Glide](https://github.com/nickpettit/glide).
 
-Also thanks to Nick Pettit for his CSS3 animation library [Glide](https://github.com/nickpettit/glide).
+Special thanks needs to also go out to [Thoughtbot](http://thoughtbot.com/) and [Bourbon](https://github.com/thoughtbot/bourbon). I borrowed some of their CSS3 animation mixins and "tailor fit" them to my needs.
 
 Also, I want to thank [theCSSguru](https://twitter.com/theCSSguru) for kickstarting a Sass port of Animate.css. He has [a page out there](http://thecssguru.freeiz.com/animate/) linking to a simple Sass conversion of Animate.css, but I wanted to do a lot more with it for the Sass community. Since it wasn't hosted on GitHub, I took the liberty to start Animate.sass and begin carving it out.
 
