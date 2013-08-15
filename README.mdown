@@ -1,3 +1,30 @@
+# My update
+
+----
+
+I have a little problem with the original method for my own usage, so I decided to fix it a little bit. Original code was made with import. I modified the "import thing" to mixins. Here's how it's work:    
+
+`@import "animate/_shared";`   
+`@import "animate/_animations";`    
+
+then    
+
+`@include animations(fading-entrances);` - entrances animations family     
+or    
+`@include animations(fading-entrances/fadeInRight);` - specific animation          
+
+    
+The output will be the same. (prefix keyframes animations + animations class. Ex: .bounceIn)    
+
+If you want to keep the original code:    
+
+`@import "animate/_shared";`   
+`@import "animate/_animations-imports";`    
+
+----
+# adamstac
+
+----
 # Animate.sass
 
 Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
