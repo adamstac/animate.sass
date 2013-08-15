@@ -1,0 +1,25 @@
+@mixin fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes fadeOut { @include fadeOut; }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes fadeOut { @include fadeOut; }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes fadeOut { @include fadeOut; }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes fadeOut { @include fadeOut; }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes fadeOut { @include fadeOut; }
+}
+@keyframes fadeOut { @include fadeOut; }
+
+.fadeOut {
+  @include animation-name(fadeOut);
+}

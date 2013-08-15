@@ -1,0 +1,28 @@
+@mixin flash {
+  0%   { opacity: 1; }
+  25%  { opacity: 0; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes flash { @include flash; }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes flash { @include flash; }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes flash { @include flash; }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes flash { @include flash; }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes flash { @include flash; }
+}
+@keyframes flash { @include flash; }
+
+.flash {
+  @include animation-name(flash);
+}

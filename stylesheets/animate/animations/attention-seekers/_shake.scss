@@ -12,23 +12,25 @@
   100% { @include transform(translateX(0), $prefix); }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes shake { @include shake(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes shake { @include shake(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes shake { @include shake(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes shake { @include shake(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes shake { @include shake(o); }
-}
-@keyframes shake { @include shake(none); }
+@mixin include-shake {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes shake { @include shake(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes shake { @include shake(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes shake { @include shake(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes shake { @include shake(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes shake { @include shake(o); }
+	}
+	@keyframes shake { @include shake(none); }
 
-.shake {
-  @include animation-name(shake);
+	.shake {
+	  @include animation-name(shake);
+	}
 }

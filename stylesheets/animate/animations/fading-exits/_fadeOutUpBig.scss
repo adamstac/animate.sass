@@ -9,23 +9,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeOutUpBig { @include fadeOutUpBig(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeOutUpBig { @include fadeOutUpBig(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeOutUpBig { @include fadeOutUpBig(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeOutUpBig { @include fadeOutUpBig(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeOutUpBig { @include fadeOutUpBig(o); }
-}
-@keyframes fadeOutUpBig { @include fadeOutUpBig(none); }
+@mixin include-fadeOutUpBig {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeOutUpBig { @include fadeOutUpBig(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeOutUpBig { @include fadeOutUpBig(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeOutUpBig { @include fadeOutUpBig(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeOutUpBig { @include fadeOutUpBig(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeOutUpBig { @include fadeOutUpBig(o); }
+	}
+	@keyframes fadeOutUpBig { @include fadeOutUpBig(none); }
 
-.fadeOutUpBig {
-  @include animation-name(fadeOutUpBig);
+	.fadeOutUpBig {
+	  @include animation-name(fadeOutUpBig);
+	}
 }
+

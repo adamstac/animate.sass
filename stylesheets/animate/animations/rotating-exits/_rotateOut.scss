@@ -11,23 +11,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes rotateOut { @include rotateOut(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes rotateOut { @include rotateOut(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes rotateOut { @include rotateOut(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes rotateOut { @include rotateOut(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes rotateOut { @include rotateOut(o); }
-}
-@keyframes rotateOut { @include rotateOut(none); }
+@mixin include-rotateOut {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes rotateOut { @include rotateOut(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes rotateOut { @include rotateOut(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes rotateOut { @include rotateOut(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rotateOut { @include rotateOut(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes rotateOut { @include rotateOut(o); }
+	}
+	@keyframes rotateOut { @include rotateOut(none); }
 
-.rotateOut {
-  @include animation-name(rotateOut);
+	.rotateOut {
+	  @include animation-name(rotateOut);
+	}
 }
+

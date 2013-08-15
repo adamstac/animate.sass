@@ -1,0 +1,25 @@
+@mixin fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes fadeIn { @include fadeIn; }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes fadeIn { @include fadeIn; }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes fadeIn { @include fadeIn; }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes fadeIn { @include fadeIn; }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes fadeIn { @include fadeIn; }
+}
+@keyframes fadeIn { @include fadeIn; }
+
+.fadeIn {
+  @include animation-name(fadeIn);
+}

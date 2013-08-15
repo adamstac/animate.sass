@@ -12,23 +12,25 @@
   100% { @include transform(scale(1)   rotate(0), $prefix); }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes tada { @include tada(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes tada { @include tada(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes tada { @include tada(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes tada { @include tada(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes tada { @include tada(o); }
-}
-@keyframes tada { @include tada(none); }
+@mixin include-tada {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes tada { @include tada(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes tada { @include tada(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes tada { @include tada(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes tada { @include tada(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes tada { @include tada(o); }
+	}
+	@keyframes tada { @include tada(none); }
 
-.tada {
-  @include animation-name(tada);
+	.tada {
+	  @include animation-name(tada);
+	}
 }

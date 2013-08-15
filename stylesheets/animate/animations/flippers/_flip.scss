@@ -21,24 +21,27 @@
 	}
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes flip { @include flip(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes flip { @include flip(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes flip { @include flip(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes flip { @include flip(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes flip { @include flip(o); }
-}
-@keyframes flip { @include flip(none); }
+@mixin include-flip {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes flip { @include flip(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes flip { @include flip(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes flip { @include flip(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flip { @include flip(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes flip { @include flip(o); }
+	}
+	@keyframes flip { @include flip(none); }
 
-.flip {
-  @include animation-name(flip);
-  @include backface-visibility(visible !important);
+	.flip {
+	  @include animation-name(flip);
+	  @include backface-visibility(visible !important);
+	}
 }
+

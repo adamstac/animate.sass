@@ -7,24 +7,26 @@
 	100% { @include transform(rotate(0deg), $prefix); }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes swing { @include swing(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes swing { @include swing(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes swing { @include swing(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes swing { @include swing(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes swing { @include swing(o); }
-}
-@keyframes swing { @include swing(none); }
+@mixin include-swing {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes swing { @include swing(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes swing { @include swing(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes swing { @include swing(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes swing { @include swing(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes swing { @include swing(o); }
+	}
+	@keyframes swing { @include swing(none); }
 
-.swing {
-	@include transform-origin(top center);
-	@include animation-name(swing);
+	.swing {
+		@include transform-origin(top center);
+		@include animation-name(swing);
+	}
 }

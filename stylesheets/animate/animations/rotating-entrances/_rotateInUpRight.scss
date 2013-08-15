@@ -11,23 +11,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes rotateInUpRight { @include rotateInUpRight(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes rotateInUpRight { @include rotateInUpRight(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes rotateInUpRight { @include rotateInUpRight(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes rotateInUpRight { @include rotateInUpRight(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes rotateInUpRight { @include rotateInUpRight(o); }
-}
-@keyframes rotateInUpRight { @include rotateInUpRight(none); }
+@mixin include-rotateInUpRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes rotateInUpRight { @include rotateInUpRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes rotateInUpRight { @include rotateInUpRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes rotateInUpRight { @include rotateInUpRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rotateInUpRight { @include rotateInUpRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes rotateInUpRight { @include rotateInUpRight(o); }
+	}
+	@keyframes rotateInUpRight { @include rotateInUpRight(none); }
 
-.rotateInUpRight {
-  @include animation-name(rotateInUpRight);
+	.rotateInUpRight {
+	  @include animation-name(rotateInUpRight);
+	}
 }
+

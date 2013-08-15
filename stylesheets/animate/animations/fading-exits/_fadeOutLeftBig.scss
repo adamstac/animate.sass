@@ -9,23 +9,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeOutLeftBig { @include fadeOutLeftBig(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeOutLeftBig { @include fadeOutLeftBig(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeOutLeftBig { @include fadeOutLeftBig(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeOutLeftBig { @include fadeOutLeftBig(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeOutLeftBig { @include fadeOutLeftBig(o); }
-}
-@keyframes fadeOutLeftBig { @include fadeOutLeftBig(none); }
+@mixin include-fadeOutLeftBig {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeOutLeftBig { @include fadeOutLeftBig(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeOutLeftBig { @include fadeOutLeftBig(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeOutLeftBig { @include fadeOutLeftBig(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeOutLeftBig { @include fadeOutLeftBig(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeOutLeftBig { @include fadeOutLeftBig(o); }
+	}
+	@keyframes fadeOutLeftBig { @include fadeOutLeftBig(none); }
 
-.fadeOutLeftBig {
-  @include animation-name(fadeOutLeftBig);
+	.fadeOutLeftBig {
+	  @include animation-name(fadeOutLeftBig);
+	}
 }
+

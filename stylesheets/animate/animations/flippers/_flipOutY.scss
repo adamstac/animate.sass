@@ -9,24 +9,27 @@
 	}
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes flipOutY { @include flipOutY(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes flipOutY { @include flipOutY(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes flipOutY { @include flipOutY(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes flipOutY { @include flipOutY(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes flipOutY { @include flipOutY(o); }
-}
-@keyframes flipOutY { @include flipOutY(none); }
+@mixin include-flipOutY {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes flipOutY { @include flipOutY(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes flipOutY { @include flipOutY(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes flipOutY { @include flipOutY(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flipOutY { @include flipOutY(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes flipOutY { @include flipOutY(o); }
+	}
+	@keyframes flipOutY { @include flipOutY(none); }
 
-.flipOutY {
-  @include animation-name(flipOutY);
-  @include backface-visibility(visible !important);
+	.flipOutY {
+	  @include animation-name(flipOutY);
+	  @include backface-visibility(visible !important);
+	}
 }
+

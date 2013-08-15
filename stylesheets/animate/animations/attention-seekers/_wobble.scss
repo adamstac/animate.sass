@@ -10,23 +10,25 @@
   100% { @include transform(translateX(0%), $prefix); }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes wobble { @include wobble(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes wobble { @include wobble(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes wobble { @include wobble(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes wobble { @include wobble(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes wobble { @include wobble(o); }
-}
-@keyframes wobble { @include wobble(none); }
+@mixin include-wobble {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes wobble { @include wobble(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes wobble { @include wobble(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes wobble { @include wobble(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes wobble { @include wobble(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes wobble { @include wobble(o); }
+	}
+	@keyframes wobble { @include wobble(none); }
 
-.wobble {
-  @include animation-name(wobble);
+	.wobble {
+	  @include animation-name(wobble);
+	}
 }

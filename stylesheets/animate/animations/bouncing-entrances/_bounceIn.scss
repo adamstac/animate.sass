@@ -15,23 +15,25 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceIn { @include bounceIn(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceIn { @include bounceIn(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceIn { @include bounceIn(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceIn { @include bounceIn(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceIn { @include bounceIn(o); }
-}
-@keyframes bounceIn { @include bounceIn(none); }
+@mixin include-bounceIn {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceIn { @include bounceIn(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceIn { @include bounceIn(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceIn { @include bounceIn(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceIn { @include bounceIn(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceIn { @include bounceIn(o); }
+	}
+	@keyframes bounceIn { @include bounceIn(none); }
 
-.bounceIn {
-  @include animation-name(bounceIn);
+	.bounceIn {
+	  @include animation-name(bounceIn);
+	}
 }

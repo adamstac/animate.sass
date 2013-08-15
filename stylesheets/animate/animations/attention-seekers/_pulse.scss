@@ -6,23 +6,25 @@
   100% { @include transform(scale(1), $prefix); }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes pulse { @include pulse(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes pulse { @include pulse(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes pulse { @include pulse(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes pulse { @include pulse(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes pulse { @include pulse(o); }
-}
-@keyframes pulse { @include pulse(none); }
+@mixin include-pulse {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes pulse { @include pulse(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes pulse { @include pulse(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes pulse { @include pulse(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes pulse { @include pulse(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes pulse { @include pulse(o); }
+	}
+	@keyframes pulse { @include pulse(none); }
 
-.pulse {
-  @include animation-name(pulse);
+	.pulse {
+	  @include animation-name(pulse);
+	}
 }

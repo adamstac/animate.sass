@@ -11,23 +11,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes rotateInDownRight { @include rotateInDownRight(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes rotateInDownRight { @include rotateInDownRight(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes rotateInDownRight { @include rotateInDownRight(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes rotateInDownRight { @include rotateInDownRight(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes rotateInDownRight { @include rotateInDownRight(o); }
-}
-@keyframes rotateInDownRight { @include rotateInDownRight(none); }
+@mixin include-rotateInDownRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes rotateInDownRight { @include rotateInDownRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes rotateInDownRight { @include rotateInDownRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes rotateInDownRight { @include rotateInDownRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rotateInDownRight { @include rotateInDownRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes rotateInDownRight { @include rotateInDownRight(o); }
+	}
+	@keyframes rotateInDownRight { @include rotateInDownRight(none); }
 
-.rotateInDownRight {
-  @include animation-name(rotateInDownRight);
+	.rotateInDownRight {
+	  @include animation-name(rotateInDownRight);
+	}
 }
+

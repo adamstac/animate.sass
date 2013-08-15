@@ -9,23 +9,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeInUp { @include fadeInUp(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeInUp { @include fadeInUp(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeInUp { @include fadeInUp(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeInUp { @include fadeInUp(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeInUp { @include fadeInUp(o); }
-}
-@keyframes fadeInUp { @include fadeInUp(none); }
+@mixin include-fadeInUp {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeInUp { @include fadeInUp(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeInUp { @include fadeInUp(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeInUp { @include fadeInUp(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeInUp { @include fadeInUp(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeInUp { @include fadeInUp(o); }
+	}
+	@keyframes fadeInUp { @include fadeInUp(none); }
 
-.fadeInUp {
-  @include animation-name(fadeInUp);
+	.fadeInUp {
+	  @include animation-name(fadeInUp);
+	}
 }
+

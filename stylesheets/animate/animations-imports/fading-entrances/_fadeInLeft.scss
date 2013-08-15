@@ -1,0 +1,31 @@
+@mixin fadeInLeft($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-20px), $prefix);
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0), $prefix);
+  }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes fadeInLeft { @include fadeInLeft(webkit); }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes fadeInLeft { @include fadeInLeft(khtml); }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes fadeInLeft { @include fadeInLeft(moz); }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes fadeInLeft { @include fadeInLeft(ms); }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes fadeInLeft { @include fadeInLeft(o); }
+}
+@keyframes fadeInLeft { @include fadeInLeft(none); }
+
+.fadeInLeft {
+  @include animation-name(fadeInLeft);
+}

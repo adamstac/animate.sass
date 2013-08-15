@@ -9,23 +9,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeOutRight { @include fadeOutRight(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeOutRight { @include fadeOutRight(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeOutRight { @include fadeOutRight(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeOutRight { @include fadeOutRight(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeOutRight { @include fadeOutRight(o); }
-}
-@keyframes fadeOutRight { @include fadeOutRight(none); }
+@mixin include-fadeOutRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeOutRight { @include fadeOutRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeOutRight { @include fadeOutRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeOutRight { @include fadeOutRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeOutRight { @include fadeOutRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeOutRight { @include fadeOutRight(o); }
+	}
+	@keyframes fadeOutRight { @include fadeOutRight(none); }
 
-.fadeOutRight {
-  @include animation-name(fadeOutRight);
+	.fadeOutRight {
+	  @include animation-name(fadeOutRight);
+	}
 }
+

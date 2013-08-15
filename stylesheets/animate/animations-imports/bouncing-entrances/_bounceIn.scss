@@ -1,0 +1,37 @@
+@mixin bounceIn($prefix) {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.3), $prefix);
+  }
+  50% {
+    opacity: 1;
+    @include transform(scale(1.05), $prefix);
+  }
+  70% {
+    @include transform(scale(0.9), $prefix);
+  }
+  100% {
+    @include transform(scale(1), $prefix);
+  }
+}
+
+@if $experimental-support-for-webkit {
+  @-webkit-keyframes bounceIn { @include bounceIn(webkit); }
+}
+@if $experimental-support-for-khtml {
+  @-khtml-keyframes bounceIn { @include bounceIn(khtml); }
+}
+@if $experimental-support-for-mozilla {
+  @-moz-keyframes bounceIn { @include bounceIn(moz); }
+}
+@if $experimental-support-for-microsoft {
+  @-ms-keyframes bounceIn { @include bounceIn(ms); }
+}
+@if $experimental-support-for-opera {
+  @-o-keyframes bounceIn { @include bounceIn(o); }
+}
+@keyframes bounceIn { @include bounceIn(none); }
+
+.bounceIn {
+  @include animation-name(bounceIn);
+}

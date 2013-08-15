@@ -15,23 +15,25 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceInLeft { @include bounceInLeft(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceInLeft { @include bounceInLeft(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceInLeft { @include bounceInLeft(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceInLeft { @include bounceInLeft(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceInLeft { @include bounceInLeft(o); }
-}
-@keyframes bounceInLeft { @include bounceInLeft(none); }
+@mixin include-bounceInLeft {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceInLeft { @include bounceInLeft(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceInLeft { @include bounceInLeft(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceInLeft { @include bounceInLeft(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceInLeft { @include bounceInLeft(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceInLeft { @include bounceInLeft(o); }
+	}
+	@keyframes bounceInLeft { @include bounceInLeft(none); }
 
-.bounceInLeft {
-  @include animation-name(bounceInLeft);
+	.bounceInLeft {
+	  @include animation-name(bounceInLeft);
+	}
 }

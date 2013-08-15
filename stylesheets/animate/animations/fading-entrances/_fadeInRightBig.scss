@@ -9,23 +9,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeInRightBig { @include fadeInRightBig(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeInRightBig { @include fadeInRightBig(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeInRightBig { @include fadeInRightBig(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeInRightBig { @include fadeInRightBig(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeInRightBig { @include fadeInRightBig(o); }
-}
-@keyframes fadeInRightBig { @include fadeInRightBig(none); }
+@mixin include-fadeInRightBig {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeInRightBig { @include fadeInRightBig(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeInRightBig { @include fadeInRightBig(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeInRightBig { @include fadeInRightBig(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeInRightBig { @include fadeInRightBig(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeInRightBig { @include fadeInRightBig(o); }
+	}
+	@keyframes fadeInRightBig { @include fadeInRightBig(none); }
 
-.fadeInRightBig {
-  @include animation-name(fadeInRightBig);
+	.fadeInRightBig {
+	  @include animation-name(fadeInRightBig);
+	}
 }
+

@@ -12,23 +12,26 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceOutDown { @include bounceOutDown(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceOutDown { @include bounceOutDown(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceOutDown { @include bounceOutDown(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceOutDown { @include bounceOutDown(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceOutDown { @include bounceOutDown(o); }
-}
-@keyframes bounceOutDown { @include bounceOutDown(none); }
+@mixin include-bounceOutDown {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceOutDown { @include bounceOutDown(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceOutDown { @include bounceOutDown(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceOutDown { @include bounceOutDown(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceOutDown { @include bounceOutDown(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceOutDown { @include bounceOutDown(o); }
+	}
+	@keyframes bounceOutDown { @include bounceOutDown(none); }
 
-.bounceOutDown {
-  @include animation-name(bounceOutDown);
+	.bounceOutDown {
+	  @include animation-name(bounceOutDown);
+	}
 }
+

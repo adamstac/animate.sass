@@ -15,23 +15,25 @@
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceInUp { @include bounceInUp(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceInUp { @include bounceInUp(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceInUp { @include bounceInUp(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceInUp { @include bounceInUp(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceInUp { @include bounceInUp(o); }
-}
-@keyframes bounceInUp { @include bounceInUp(none); }
+@mixin include-bounceInUp {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceInUp { @include bounceInUp(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceInUp { @include bounceInUp(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceInUp { @include bounceInUp(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceInUp { @include bounceInUp(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceInUp { @include bounceInUp(o); }
+	}
+	@keyframes bounceInUp { @include bounceInUp(none); }
 
-.bounceInUp {
-  @include animation-name(bounceInUp);
+	.bounceInUp {
+	  @include animation-name(bounceInUp);
+	}
 }
