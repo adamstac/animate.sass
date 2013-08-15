@@ -1,8 +1,8 @@
-# My update
-
+# My update    
+##### Refer to http://daneden.me/animate/ to view animations
 ----
 
-I have a little problem with the original method for my own usage, so I decided to fix it a little bit. Original code was made with import. I modified the "import thing" to mixins. Here's how it's work:    
+I have a little problem with the original method for my own usage, so I decided to fixed it a little bit. Original code was made with import. I modified the "import thing" to mixins. Here's how it's work:    
 
 `@import "animate/_shared";`   
 `@import "animate/_animations";`    
@@ -20,6 +20,107 @@ If you want to keep the original code:
 
 `@import "animate/_shared";`   
 `@import "animate/_animations-imports";`    
+
+### Animations family    
+
+`attention-seekers`    
+`bouncing-entrances`    
+`bouncing-exits`   
+`fading-entrances`   
+`fading-exits`   
+`flippers`   
+`rotating-entrances`   
+`rotating-exits`   
+`specials`    
+
+###Single animation    
+
+#### attention-seeker
+`attention-seekers/bounce`   
+`attention-seekers/flash`   
+`attention-seekers/pulse`   
+`attention-seekers/shake`   
+`attention-seekers/swing`   
+`attention-seekers/tada`   
+`attention-seekers/wobble` 
+
+---
+
+#### bouncing-entrances
+`bouncing-entrances/bounceIn`   
+`bouncing-entrances/bounceInDown`   
+`bouncing-entrances/bounceInLeft`   
+`bouncing-entrances/bounceInRight`   
+`bouncing-entrances/bounceInUp`   
+
+---
+
+#### bouncing-exits
+`bouncing-exits/bounceOut`   
+`bouncing-exits/bounceOutDown`   
+`bouncing-exits/bounceOutLeft`   
+`bouncing-exits/bounceOutRight`   
+`bouncing-exits/bounceOutUp`   
+
+---
+
+#### fading-entrances
+`fading-entrances/fadeIn`   
+`fading-entrances/fadeInDown`   
+`fading-entrances/fadeInDownBig`   
+`fading-entrances/fadeInLeft`   
+`fading-entrances/fadeInLeftBig`    
+`fading-entrances/fadeInRight`    
+`fading-entrances/fadeInRightBig`    
+`fading-entrances/fadeInUp`    
+`fading-entrances/fadeInUpBig`     
+
+---
+
+#### fading-exits
+`fading-exits/fadeOut`   
+`fading-exits/fadeOutDown`   
+`fading-exits/fadeOutDownBig`   
+`fading-exits/fadeOutLeft`   
+`fading-exits/fadeOutLeftBig`    
+`fading-exits/fadeOutRight`    
+`fading-exits/fadeOutRightBig`    
+`fading-exits/fadeOutUp`    
+`fading-exits/fadeOutUpBig`     
+
+---
+
+#### flippers    
+`flippers/flip`   
+`flippers/flipInX`   
+`flippers/flipInY`   
+`flippers/flipOutX`   
+`flippers/flipOutY`        
+
+---
+
+#### rotating-entrances    
+`rotating-entrances/rotateIn`   
+`rotating-entrances/rotateInDownLeft`   
+`rotating-entrances/rotateInDownRight`   
+`rotating-entrances/rotateInUpLeft`   
+`rotating-entrances/rotateInUpRight`       
+
+---
+
+#### rotating-exits    
+`rotating-exits/rotateOut`   
+`rotating-exits/rotateOutDownLeft`   
+`rotating-exits/rotateOutDownRight`   
+`rotating-exits/rotateOutUpLeft`   
+`rotating-exits/rotateOutUpRight`       
+
+---
+
+#### specials    
+`specials/hinge`   
+`specials/rollIn`   
+`specials/rollOut`    
 
 ----
 # adamstac
