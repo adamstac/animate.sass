@@ -92,7 +92,6 @@
 	}@elseif $animation-type == fading-entrances { /* fading-entrances */
 		@include include-fadeIn();
 		@include include-fadeInDown();
-		@include include-fadeIn();
 		@include include-fadeInDownBig();
 		@include include-fadeInLeft();
 		@include include-fadeInLeftBig();
@@ -119,16 +118,15 @@
 	}@elseif $animation-type == fading-entrances/fadeInUpBig {
 		@include include-fadeInUpBig();
 	}@elseif $animation-type == fading-exits { /* fading-exits */
-		@include include-fadeIn();
-		@include include-fadeInDown();
-		@include include-fadeIn();
-		@include include-fadeInDownBig();
-		@include include-fadeInLeft();
-		@include include-fadeInLeftBig();
-		@include include-fadeInRight();
-		@include include-fadeInRightBig();
-		@include include-fadeInUp();
-		@include include-fadeInUpBig();
+		@include include-fadeOut();
+		@include include-fadeOutDown();
+		@include include-fadeOutDownBig();
+		@include include-fadeOutLeft();
+		@include include-fadeOutLeftBig();
+		@include include-fadeOutRight();
+		@include include-fadeOutRightBig();
+		@include include-fadeOutUp();
+		@include include-fadeOutUpBig();
 	}@elseif $animation-type == fading-exits/fadeIn {
 		@include include-fadeOut();
 	}@elseif $animation-type == fading-exits/fadeOutDown {
