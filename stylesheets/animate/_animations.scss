@@ -153,10 +153,10 @@
 		@include include-flipOutY();
 	}@elseif $animation-type == flippers/flip {
 		@include include-flip();
-	}@elseif $animation-type == flippers/flipX {
-		@include include-flipX();
-	}@elseif $animation-type == flippers/flipY {
-		@include include-flipY();
+	}@elseif $animation-type == flippers/flipInX {
+		@include include-flipInX();
+	}@elseif $animation-type == flippers/flipInY {
+		@include include-flipInY();
 	}@elseif $animation-type == flippers/flipOutX {
 		@include include-flipOutX();
 	}@elseif $animation-type == flippers/flipOutY {
