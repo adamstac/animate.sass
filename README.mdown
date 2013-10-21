@@ -17,10 +17,12 @@ or
 `@include animation-keyframes(fading-entrances/fadeInRight);` - specific animation          
 
 In addition you can use the animation mixin which will put the adjoining keyframe into your class.
-    @include animation-keyframes(fading-entrances/fadeInRight);
-    .my-class {
-        @include animations(fadeInRight);
-    }
+```
+@include animation-keyframes(fading-entrances/fadeInRight);
+.my-class {
+    @include animations(fadeInRight);
+}
+```
 This will put the fade in right animation inside the class 'my-class'   
 
     
