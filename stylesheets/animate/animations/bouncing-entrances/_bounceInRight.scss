@@ -23,11 +23,8 @@
 	  @-khtml-keyframes bounceInRight { @include bounceInRight(khtml); }
 	}
 	@if $experimental-support-for-mozilla {
-	  @-moz-keyframes bounceInRight { @include bounceInRight(moz); }
-	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes bounceInRight { @include bounceInRight(ms); }
-	}
+	  @-moz-keyframes bounceInRight { @include bounceInRight(moz);
+    }
 	@if $experimental-support-for-opera {
 	  @-o-keyframes bounceInRight { @include bounceInRight(o); }
 	}

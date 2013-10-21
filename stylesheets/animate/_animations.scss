@@ -2,6 +2,10 @@
 // flash bounce shake tada swing wobble pulse
 @import "animations/attention-seekers";
 
+// Flippers
+// flip flipInX flipOutX flipInY flipOutY
+@import "animations/flippers";
+
 // Fading entrances
 // fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig
 @import "animations/fading-entrances";
@@ -9,6 +13,10 @@
 // Fading exits
 // fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig
 @import "animations/fading-exits";
+
+// Sliders
+// slideInDown slideInLeft slideInRight slideOutUp slideOutLeft slideOutRight
+@import "animations/sliders";
 
 // Bouncing entrances
 // bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight
@@ -26,13 +34,13 @@
 // rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight
 @import "animations/rotating-exits";
 
+// Lightspeed
+// lightSpeedIn lightSpeedOut
+@import "animations/lightspeed";
+
 // Specials
 // hinge rollIn rollOut
 @import "animations/specials";
-
-// Flippers
-// flip flipInX flipOutX flipInY flipOutY
-@import "animations/flippers";
 
 @mixin animations($animation-type:null) {
 	@if $animation-type == attention-seekers {
@@ -203,6 +211,32 @@
 		@include include-rollIn();
 	}@else if $animation-type == specials/rollOut {
 		@include include-rollOut();
+    }@else if $animation-type == sliders {
+      @include include-slideInDown();
+      @include include-slideInLeft();
+      @include include-slideInRight();
+      @include include-slideOutUp();
+      @include include-slideOutLeft();
+      @include include-slideOutRight();
+    }@else if $animation-type == sliders/slideInDown {
+      @include include-slideInDown();
+    }@else if $animation-type == sliders/slideInLeft {
+      @include include-slideInLeft();
+    }@else if $animation-type == sliders/slideInRight {
+      @include include-slideInRight();
+    }@else if $animation-type == sliders/slideOutUp {
+      @include include-slideOutUp();
+    }@else if $animation-type == sliders/slideOutLeft {
+      @include include-slideOutLeft();
+    }@else if $animation-type == sliders/slideOutRight {
+      @include include-slideOutRight();
+    }@else if $animation-type == lightspeed {
+      @include include-lightSpeedIn();
+      @include include-lightSpeedOut();
+    }@else if $animation-type == lightspeed/lightSpeedIn {
+      @include include-lightSpeedIn();
+    }@else if $animation-type == lightspeed/lightSpeedOut {
+      @include include-lightSpeedOut();
 	}@else {
 		/* nothing */
 	}

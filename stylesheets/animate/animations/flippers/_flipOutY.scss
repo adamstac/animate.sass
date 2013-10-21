@@ -19,9 +19,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes flipOutY { @include flipOutY(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes flipOutY { @include flipOutY(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes flipOutY { @include flipOutY(o); }
 	}

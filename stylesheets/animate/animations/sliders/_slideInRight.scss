@@ -1,0 +1,30 @@
+@mixin slideInRight($prefix) {
+    0% {
+        @include transform(translateX(2000px), $prefix);
+        opacity: 0;
+    }
+	100% {
+      @include transform(translateX(0), $prefix);
+	}
+}
+
+@mixin include-slideInRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes slideInRight { @include slideInRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes slideInRight { @include slideInRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes slideInRight { @include slideInRight(moz); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes slideInRight { @include slideInRight(o); }
+	}
+	@keyframes slideInRight { @include slideInRight(none); }
+
+	.slideInRight {
+	  @include animation-name(slideInRight);
+	}
+}
+

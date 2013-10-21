@@ -1,15 +1,7 @@
 @mixin shake($prefix) {
-  0%   { @include transform(translateX(0), $prefix); }
-  10%  { @include transform(translateX(-10px), $prefix); }
-  20%  { @include transform(translateX(10px), $prefix); }
-  30%  { @include transform(translateX(-10px), $prefix); }
-  40%  { @include transform(translateX(10px), $prefix); }
-  50%  { @include transform(translateX(-10px), $prefix); }
-  60%  { @include transform(translateX(10px), $prefix); }
-  70%  { @include transform(translateX(-10px), $prefix); }
-  80%  { @include transform(translateX(10px), $prefix); }
-  90%  { @include transform(translateX(-10px), $prefix); }
-  100% { @include transform(translateX(0), $prefix); }
+  0%, 100% { @include transform(translateX(0), $prefix); }
+  10%, 30%, 50%, 70%, 90%  { @include transform(translateX(-10px), $prefix); }
+  20%, 40%, 60%, 80%  { @include transform(translateX(10px), $prefix); }
 }
 
 @mixin include-shake {
@@ -21,9 +13,6 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes shake { @include shake(moz); }
-	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes shake { @include shake(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes shake { @include shake(o); }

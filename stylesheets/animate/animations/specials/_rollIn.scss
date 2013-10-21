@@ -21,9 +21,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes rollIn { @include rollIn(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes rollIn { @include rollIn(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes rollIn { @include rollIn(o); }
 	}

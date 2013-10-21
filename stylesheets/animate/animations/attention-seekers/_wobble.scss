@@ -20,9 +20,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes wobble { @include wobble(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes wobble { @include wobble(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes wobble { @include wobble(o); }
 	}

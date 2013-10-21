@@ -19,9 +19,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeInRightBig { @include fadeInRightBig(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes fadeInRightBig { @include fadeInRightBig(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeInRightBig { @include fadeInRightBig(o); }
 	}

@@ -36,9 +36,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes hinge { @include hinge(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes hinge { @include hinge(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes hinge { @include hinge(o); }
 	}

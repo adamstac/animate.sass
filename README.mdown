@@ -2,7 +2,10 @@
 ##### Refer to http://daneden.me/animate/ to view animations
 ----
 
-I have a little problem with the original method for my own usage, so I decided to fixed it a little bit. Original code was made with import. I modified the "import thing" to mixins. Here's how it's work:    
+This is a forked version of animate.sass, updated to v2.1 of animate.css
+
+This leverages the changes made by polkin, who had modified the "import thing" to mixins. 
+Here's how it works:    
 
 `@import "animate/_shared";`   
 `@import "animate/_animations";`    
@@ -28,14 +31,16 @@ If you want to keep the original code:
 `bouncing-exits`   
 `fading-entrances`   
 `fading-exits`   
-`flippers`   
+`flippers`
+`lightspeed`
 `rotating-entrances`   
-`rotating-exits`   
+`rotating-exits`
+`sliders`
 `specials`    
 
 ###Single animation    
 
-#### attention-seeker
+#### attention-seekers
 `attention-seekers/bounce`   
 `attention-seekers/flash`   
 `attention-seekers/pulse`   
@@ -99,6 +104,12 @@ If you want to keep the original code:
 
 ---
 
+#### lightspeed    
+`lightspeed/lightSpeedIn`   
+`lightspeed/lightSpeedOut`          
+
+---
+
 #### rotating-entrances    
 `rotating-entrances/rotateIn`   
 `rotating-entrances/rotateInDownLeft`   
@@ -117,10 +128,20 @@ If you want to keep the original code:
 
 ---
 
+#### sliders    
+`sliders/slideInDown`   
+`sliders/slideInLeft`   
+`sliders/slideInRight`
+`sliders/slideOutUp`   
+`sliders/slideOutLeft`   
+`sliders/slideOutRight`
+
+---
+
 #### specials    
 `specials/hinge`   
 `specials/rollIn`   
-`specials/rollOut`    
+`specials/rollOut` 
 
 ----
 # adamstac

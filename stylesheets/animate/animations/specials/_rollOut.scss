@@ -21,9 +21,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes rollOut { @include rollOut(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes rollOut { @include rollOut(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes rollOut { @include rollOut(o); }
 	}

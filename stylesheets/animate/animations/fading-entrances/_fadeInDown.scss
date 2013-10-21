@@ -19,10 +19,7 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeInDown { @include fadeInDown(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes fadeInDown { @include fadeInDown(ms); }
-	}
-	@if $experimental-support-for-opera {
+s	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeInDown { @include fadeInDown(o); }
 	}
 	@keyframes fadeInDown { @include fadeInDown(none); }
