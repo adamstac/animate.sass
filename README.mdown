@@ -7,31 +7,24 @@ This is a forked version of animate.sass, updated to v2.1 of animate.css
 This leverages the changes made by polikin, who had modified the "import thing" to mixins. 
 Here's how it works:    
 
-`@import "animate/_shared";`   
-`@import "animate/_animations";`    
-
-then    
-
-`@include animation-keyframes(fading-entrances);` - entrances animations family     
-or    
-`@include animation-keyframes(fading-entrances/fadeInRight);` - specific animation          
-
-In addition you can use the animation mixin which will put the adjoining keyframe into your class.
 ```
+// 1. Import these base sass files.
+@import "animate/_shared";
+@import "animate/_animations";  
+
+// 2. include the keyframes you want to use in your code.    
+
+// Includes the entire entrances animations family
+@include animation-keyframes(fading-entrances); 
+// or include just the fadeInRight keyframe   
 @include animation-keyframes(fading-entrances/fadeInRight);
+
+// 3. use the animation mixin to include the animation in your css.
 .my-class {
     @include animations(fadeInRight);
 }
 ```
-This will put the fade in right animation inside the class 'my-class'   
-
-    
-The output will be the same. (prefix keyframes animations + animations class. Ex: .bounceIn)    
-
-If you want to keep the original code:    
-
-`@import "animate/_shared";`   
-`@import "animate/_animations-imports";`    
+This example will build only the animate.css keyframes for the fade in right animation inside the class 'my-class'. 
 
 ### Animation families    
 
@@ -153,9 +146,6 @@ If you want to keep the original code:
 `specials/rollOut` 
 
 ----
-# update by westwesterson original by adamstac
-
-----
 # Animate.sass
 
 Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
@@ -174,24 +164,6 @@ The usage is simple, `@import animate.sass` (loads all animations) and have fun.
 
 Usage examples and documentation are in the works, but until then, check out the test project for help. Animate.sass is still in development and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
 
-### Animations, a la carte ...
-
-You may not want to load the full stack of animations from animate.sass, which emits over 5000+ lines of CSS. Instead you would like to pull in just a few animations or even a particular animation family. If that's the case, here's how to do that.
-
-Rather than `@import animate.sass` (all animations), do this ...
-
-First you need to import what's shared between all animations, `@import animate/shared`. Then you'll be able to import a full animation family or individual animations.
-
-For example, if you wanted to use all the animations from the attention seekers animation family, and a few from the flippers animation family, here's what you'd do.
-
-    // Animate.sass shared stuffs
-    @import animate/shared
-    
-    // Animate.sass animation families and individual animations
-    @import animate/animations/attention-seekers
-    @import animate/animations/flippers/flip
-    @import animate/animations/flippers/flipInX
-    @import animate/animations/flippers/flipOutX
 
 ## Credits and special thanks
 
