@@ -4,7 +4,7 @@
 
 This is a forked version of animate.sass, updated to v2.1 of animate.css
 
-This leverages the changes made by polkin, who had modified the "import thing" to mixins. 
+This leverages the changes made by polikin, who had modified the "import thing" to mixins. 
 Here's how it works:    
 
 `@import "animate/_shared";`   
