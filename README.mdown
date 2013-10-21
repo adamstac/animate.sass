@@ -9,8 +9,7 @@ Here's how it works:
 
 ```
 // 1. Import these base sass files.
-@import "animate/_shared";
-@import "animate/_animations";  
+@import "animate";
 
 // 2. include the keyframes you want to use in your code.    
 
