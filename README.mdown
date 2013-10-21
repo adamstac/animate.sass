@@ -42,7 +42,8 @@ Here's how it works:
     @include animations(fadeInRight);
 }
 ```
----
+## Example
+
 This example will attach the animate.css keyframes for the fadeInRight animation inside the class 'my-class'.
 ```
 @include animation-keyframes(fading-entrances/fadeInRight);
