@@ -42,7 +42,8 @@
 // hinge rollIn rollOut
 @import "animations/specials";
 
-@mixin animations($animation-type:null) {
+// Creates the animation keyframes and base class
+@mixin animation-keyframes($animation-type:null) {
 	@if $animation-type == attention-seekers {
 		@include include-bounce();
 		@include include-flash();
@@ -240,4 +241,66 @@
 	}@else {
 		/* nothing */
 	}
+}
+
+@mixin animation($name: false) {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration:1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode:both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  @if $name {
+    @include animation-name($name);
+    @if $name == flip {
+      @include backface-visibility(visible !important);
+    }
+    @else if $name == flipInX {
+      @include backface-visibility(visible !important);
+    }
+    @else if $name == flipOutX {
+      @include backface-visibility(visible !important);
+    }
+    @else if $name == flipInY {
+      @include backface-visibility(visible !important);
+    }
+    @else if $name == flipOutY {
+      -webkit-backface-visibility: visible !important;
+      -moz-backface-visibility: visible !important;
+      -o-backface-visibility: visible !important;
+      backface-visibility: visible !important;
+    }
+    @else if $name == swing {
+      -webkit-transform-origin: top center;
+      -moz-transform-origin: top center;
+      -o-transform-origin: top center;
+      transform-origin: top center;
+    }
+    @else if $name == hinge {
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      -o-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+    @else if $name == lightSpeedIn {
+      -webkit-animation-timing-function: ease-out;
+      -moz-animation-timing-function: ease-out;
+      -o-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      -o-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+    }
+    @else if $name == lightSpeedOut {
+      -webkit-animation-duration: 0.25s;
+      -moz-animation-duration: 0.25s;
+      -o-animation-duration: 0.25s;
+      animation-duration: 0.25s;
+    }
+  }
 }

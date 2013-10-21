@@ -12,9 +12,15 @@ Here's how it works:
 
 then    
 
-`@include animations(fading-entrances);` - entrances animations family     
+`@include animation-keyframes(fading-entrances);` - entrances animations family     
 or    
-`@include animations(fading-entrances/fadeInRight);` - specific animation          
+`@include animation-keyframes(fading-entrances/fadeInRight);` - specific animation          
+
+In addition you can use the animation mixin which will put the adjoining keyframe into your class.
+`@include animation-keyframes(fading-entrances/fadeInRight);
+.my-class {
+    @include animation(fadeInRight);
+}` - will put the fade in right animation inside the class 'my-class'   
 
     
 The output will be the same. (prefix keyframes animations + animations class. Ex: .bounceIn)    
