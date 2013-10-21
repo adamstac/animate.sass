@@ -255,7 +255,6 @@
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
   @if $name {
-    @include animation-name($name);
     @if $name == flip {
       @include backface-visibility(visible !important);
     }
@@ -302,5 +301,6 @@
       -o-animation-duration: 0.25s;
       animation-duration: 0.25s;
     }
+    @include animation-name($name);
   }
 }

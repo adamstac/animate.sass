@@ -24,15 +24,12 @@
 @if $experimental-support-for-mozilla {
   @-moz-keyframes flipInX { @include flipInX(moz); }
 }
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes flipInX { @include flipInX(ms); }
-}
 @if $experimental-support-for-opera {
   @-o-keyframes flipInX { @include flipInX(o); }
 }
 @keyframes flipInX { @include flipInX(none); }
 
 .flipInX {
-  @include animation-name(flipInX);
   @include backface-visibility(visible !important);
+  @include animation-name(flipInX);
 }
