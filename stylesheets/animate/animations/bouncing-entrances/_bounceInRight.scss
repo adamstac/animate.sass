@@ -16,21 +16,21 @@
 }
 
 @mixin include-bounceInRight {
-	@if $experimental-support-for-webkit {
-	  @-webkit-keyframes bounceInRight { @include bounceInRight(webkit); }
-	}
-	@if $experimental-support-for-khtml {
-	  @-khtml-keyframes bounceInRight { @include bounceInRight(khtml); }
-	}
-	@if $experimental-support-for-mozilla {
-	  @-moz-keyframes bounceInRight { @include bounceInRight(moz);
+    @if $experimental-support-for-webkit {
+      @-webkit-keyframes bounceInRight { @include bounceInRight(webkit); }
     }
-	@if $experimental-support-for-opera {
-	  @-o-keyframes bounceInRight { @include bounceInRight(o); }
-	}
-	@keyframes bounceInRight { @include bounceInRight(none); }
+    @if $experimental-support-for-khtml {
+      @-khtml-keyframes bounceInRight { @include bounceInRight(khtml); }
+    }
+    @if $experimental-support-for-mozilla {
+      @-moz-keyframes bounceInRight { @include bounceInRight(moz); }
+    }
+    @if $experimental-support-for-opera {
+      @-o-keyframes bounceInRight { @include bounceInRight(o); }
+    }
+    @keyframes bounceInRight { @include bounceInRight(none); }
 
-	.bounceInRight {
-	  @include animation-name(bounceInRight);
-	}
+    .bounceInRight {
+      @include animation-name(bounceInRight);
+    }
 }
