@@ -24,20 +24,28 @@ The core of Animate.sass, despite being named "dot sass", is written in [SCSS](h
 
 Here's how it works:    
 
+1. include the keyframes you want to use in your code. 
+    Note: Animation keyframes cannot be nested, they must be at the base level of your sass file.   
 ```
-// 1. include the keyframes you want to use in your code.    
-
 // Includes the entire entrances animations family
 @include animation-keyframes(fading-entrances); 
 // or include just the fadeInRight keyframe   
 @include animation-keyframes(fading-entrances/fadeInRight);
+```
 
-// 2. use the animation mixin to include the animation in your css.
+2. use the animation mixin to include the animation in your css.
+```
 .my-class {
     @include animations(fadeInRight);
 }
 ```
-This example will build only the animate.css keyframes for the fade in right animation inside the class 'my-class'. 
+This example will build only the animate.css keyframes for the fade in right animation inside the class 'my-class'.
+```
+@include animation-keyframes(fading-entrances/fadeInRight);
+.my-class {
+    @include animations(fadeInRight);
+}
+```
 
 ### Animation families    
 
