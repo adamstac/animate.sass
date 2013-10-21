@@ -18,24 +18,21 @@ The core of Animate.sass, despite being named "dot sass", is written in [SCSS](h
 
 1. `gem install animate-sass`
 2. Add `require 'animate-sass'` in Compass's `config.rb` file
-3. Then `@import animate.sass` (all animations)
+3. Then `@import animate.sass` at the top of your main sass file.
 
 ## Usage
 
 Here's how it works:    
 
 ```
-// 1. Import these base sass files.
-@import "animate";
-
-// 2. include the keyframes you want to use in your code.    
+// 1. include the keyframes you want to use in your code.    
 
 // Includes the entire entrances animations family
 @include animation-keyframes(fading-entrances); 
 // or include just the fadeInRight keyframe   
 @include animation-keyframes(fading-entrances/fadeInRight);
 
-// 3. use the animation mixin to include the animation in your css.
+// 2. use the animation mixin to include the animation in your css.
 .my-class {
     @include animations(fadeInRight);
 }
