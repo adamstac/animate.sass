@@ -26,12 +26,15 @@ Here's how it works:
 
 1. include the keyframes you want to use in your code. 
     Note: Animation keyframes cannot be nested, they must be at the base level of your sass file.   
-```
-// Includes the entire entrances animations family
-@include animation-keyframes(fading-entrances); 
-// or include just the fadeInRight keyframe   
-@include animation-keyframes(fading-entrances/fadeInRight);
-```
+
+    Include the entire entrances animations family
+    ```
+    @include animation-keyframes(fading-entrances); 
+    ```
+    Or include just the fadeInRight keyframe 
+    ```  
+    @include animation-keyframes(fading-entrances/fadeInRight);
+    ```
 
 2. use the animation mixin to include the animation in your css.
 ```
