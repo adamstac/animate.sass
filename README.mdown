@@ -19,7 +19,7 @@ or
 In addition you can use the animation mixin which will put the adjoining keyframe into your class.
 `@include animation-keyframes(fading-entrances/fadeInRight);
 .my-class {
-    @include animation(fadeInRight);
+    @include animations(fadeInRight);
 }` - will put the fade in right animation inside the class 'my-class'   
 
     

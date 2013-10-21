@@ -1,3 +1,8 @@
+# 0.2.0
+
+* [CHANGED] Now based on version 2.1 of animate.css
+* [CHANGED] Now use with mixins
+
 # 0.1.1
 
 * [NEW] Enabled individual animation and animation family usage (not required to load the full stack)
