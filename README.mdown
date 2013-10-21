@@ -24,18 +24,18 @@ If you want to keep the original code:
 `@import "animate/_shared";`   
 `@import "animate/_animations-imports";`    
 
-### Animations family    
+### Animation families    
 
 `attention-seekers`    
 `bouncing-entrances`    
 `bouncing-exits`   
 `fading-entrances`   
 `fading-exits`   
-`flippers`
-`lightspeed`
+`flippers`   
+`lightspeed`   
 `rotating-entrances`   
-`rotating-exits`
-`sliders`
+`rotating-exits`   
+`sliders`   
 `specials`    
 
 ###Single animation    
@@ -131,7 +131,7 @@ If you want to keep the original code:
 #### sliders    
 `sliders/slideInDown`   
 `sliders/slideInLeft`   
-`sliders/slideInRight`
+`sliders/slideInRight`   
 `sliders/slideOutUp`   
 `sliders/slideOutLeft`   
 `sliders/slideOutRight`
