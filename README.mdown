@@ -144,7 +144,7 @@ If you want to keep the original code:
 `specials/rollOut` 
 
 ----
-# adamstac
+# update by westwesterson original by adamstac
 
 ----
 # Animate.sass
