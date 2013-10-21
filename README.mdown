@@ -43,7 +43,7 @@ Here's how it works:
 }
 ```
 ---
-This example will build only the animate.css keyframes for the fade in right animation inside the class 'my-class'.
+This example will attach the animate.css keyframes for the fadeInRight animation inside the class 'my-class'.
 ```
 @include animation-keyframes(fading-entrances/fadeInRight);
 .my-class {
