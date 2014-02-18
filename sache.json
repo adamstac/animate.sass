@@ -1,0 +1,5 @@
+{
+  "name": "Animate.sass",
+  "description": "Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by Dan Eden in Animate.css.",
+  "tags": ["sass", "library", "compass", "mixins", "animate", "css3"]
+}
