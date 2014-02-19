@@ -1,33 +1,36 @@
 @mixin rotateOutDownRight($prefix) {
   0% {
-    @include transform-origin(right bottom, $prefix);
-    @include transform(rotate(0), $prefix);
+    @include animate-transform-origin(right bottom, $prefix);
+    @include animate-transform(rotate(0), $prefix);
     opacity: 1;
   }
   100% {
-    @include transform-origin(right bottom, $prefix);
-    @include transform(rotate(-90deg), $prefix);
+    @include animate-transform-origin(right bottom, $prefix);
+    @include animate-transform(rotate(-90deg), $prefix);
     opacity: 0;
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes rotateOutDownRight { @include rotateOutDownRight(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes rotateOutDownRight { @include rotateOutDownRight(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes rotateOutDownRight { @include rotateOutDownRight(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes rotateOutDownRight { @include rotateOutDownRight(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes rotateOutDownRight { @include rotateOutDownRight(o); }
-}
-@keyframes rotateOutDownRight { @include rotateOutDownRight(none); }
+@mixin include-rotateOutDownRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes rotateOutDownRight { @include rotateOutDownRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes rotateOutDownRight { @include rotateOutDownRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes rotateOutDownRight { @include rotateOutDownRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rotateOutDownRight { @include rotateOutDownRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes rotateOutDownRight { @include rotateOutDownRight(o); }
+	}
+	@keyframes rotateOutDownRight { @include rotateOutDownRight(none); }
 
-.rotateOutDownRight {
-  @include animation-name(rotateOutDownRight);
+	.rotateOutDownRight {
+	  @include animation-name(rotateOutDownRight);
+	}
 }
+

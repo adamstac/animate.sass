@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.name = "animate-sass"
   s.summary = %q{Sass and Compass CSS animation library for WebKit, Firefox and beyond, based on Animate.css} # one-liner
   s.description = %q{Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done in Animate.css} # long-form
-  s.authors = ["Adam Stacoviak"]
-  s.email = ["adam@stacoviak.com"]
-  s.homepage = "https://github.com/adamstac/animate.sass"
+  s.authors = ["Joshua Ellinger"]
+  s.email = ["josh.ellinger@gmail.com"]
+  s.homepage = "https://github.com/westwesterson/animate.sass"
 
   # Gem files
   # These are the files that get distributated in the gem

@@ -1,44 +1,47 @@
 @mixin flip($prefix) {
 	0% {
-		@include transform(perspective(400px) rotateY(0), $prefix);
+		@include animate-transform(perspective(400px) rotateY(0), $prefix);
 		@include animation-timing-function(ease-out, $prefix: $prefix);
 	}
 	40% {
-		@include transform(perspective(400px) translateZ(150px) rotateY(170deg), $prefix);
+		@include animate-transform(perspective(400px) translateZ(150px) rotateY(170deg), $prefix);
 		@include animation-timing-function(ease-out, $prefix: $prefix);
 	}
 	50% {
-		@include transform(perspective(400px) translateZ(150px) rotateY(190deg) scale(1), $prefix);
+		@include animate-transform(perspective(400px) translateZ(150px) rotateY(190deg) scale(1), $prefix);
 		@include animation-timing-function(ease-in, $prefix: $prefix);
 	}
 	80% {
-		@include transform(perspective(400px) rotateY(360deg) scale(.95), $prefix);
+		@include animate-transform(perspective(400px) rotateY(360deg) scale(.95), $prefix);
 		@include animation-timing-function(ease-in, $prefix: $prefix);
 	}
 	100% {
-		@include transform(perspective(400px) scale(1), $prefix);
+		@include animate-transform(perspective(400px) scale(1), $prefix);
 		@include animation-timing-function(ease-in, $prefix: $prefix);
 	}
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes flip { @include flip(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes flip { @include flip(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes flip { @include flip(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes flip { @include flip(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes flip { @include flip(o); }
-}
-@keyframes flip { @include flip(none); }
+@mixin include-flip {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes flip { @include flip(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes flip { @include flip(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes flip { @include flip(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flip { @include flip(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes flip { @include flip(o); }
+	}
+	@keyframes flip { @include flip(none); }
 
-.flip {
-  @include animation-name(flip);
-  @include backface-visibility(visible !important);
+	.flip {
+	  @include animation-name(flip);
+	  @include backface-visibility(visible !important);
+	}
 }
+

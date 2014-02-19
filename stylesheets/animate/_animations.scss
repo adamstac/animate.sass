@@ -33,3 +33,177 @@
 // Flippers
 // flip flipInX flipOutX flipInY flipOutY
 @import "animations/flippers";
+
+@mixin animations($animation-type:null) {
+	@if $animation-type == attention-seekers {
+		@include include-bounce();
+		@include include-flash();
+		@include include-pulse();
+		@include include-shake();
+		@include include-swing();
+		@include include-tada();
+		@include include-wobble();
+	}@elseif $animation-type == attention-seekers/bounce { /* attention-seekers */
+		@include include-bounce();
+	}@elseif $animation-type == attention-seekers/flash {
+		@include include-flash();
+	}@elseif $animation-type == attention-seekers/pulse {
+		@include include-pulse();
+	}@elseif $animation-type == attention-seekers/shake {
+		@include include-shake();
+	}@elseif $animation-type == attention-seekers/swing {
+		@include include-swing();
+	}@elseif $animation-type == attention-seekers/tada {
+		@include include-tada();
+	}@elseif $animation-type == attention-seekers/wobble {
+		@include include-wobble();
+	}@elseif $animation-type == bouncing-entrances { /* bouncing-entrances */
+		@include include-bounceIn();
+		@include include-bounceInDown();
+		@include include-bounceInLeft();
+		@include include-bounceInRight();
+		@include include-bounceInUp();
+	}@elseif $animation-type == bouncing-entrances/bounceIn {
+		@include include-bounceIn();
+	}@elseif $animation-type == bouncing-entrances/bounceInDown {
+		@include include-bounceInDown();
+	}@elseif $animation-type == bouncing-entrances/bounceInLeft {
+		@include include-bounceInLeft();
+	}@elseif $animation-type == bouncing-entrances/bounceInRight {
+		@include include-bounceInRight();
+	}@elseif $animation-type == bouncing-entrances/bounceInUp {
+		@include include-bounceInUp();
+	}@elseif $animation-type == bouncing-exits { /* bouncing-exits */
+		@include include-bounceOut();
+		@include include-bounceOutDown();
+		@include include-bounceOutLeft();
+		@include include-bounceOutRight();
+		@include include-bounceOutUp();
+	}@elseif $animation-type == bouncing-exits/bounceOut {
+		@include include-bounceOut();
+	}@elseif $animation-type == bouncing-exits/bounceOutDown {
+		@include include-bounceOutDown();
+	}@elseif $animation-type == bouncing-exits/bounceOutLeft {
+		@include include-bounceOutLeft();
+	}@elseif $animation-type == bouncing-exits/bounceOutRight {
+		@include include-bounceOutRight();
+	}@elseif $animation-type == bouncing-exits/bounceOutUp {
+		@include include-bounceOutUp();
+	}@elseif $animation-type == fading-entrances { /* fading-entrances */
+		@include include-fadeIn();
+		@include include-fadeInDown();
+		@include include-fadeInDownBig();
+		@include include-fadeInLeft();
+		@include include-fadeInLeftBig();
+		@include include-fadeInRight();
+		@include include-fadeInRightBig();
+		@include include-fadeInUp();
+		@include include-fadeInUpBig();
+	}@elseif $animation-type == fading-entrances/fadeIn {
+		@include include-fadeIn();
+	}@elseif $animation-type == fading-entrances/fadeInDown {
+		@include include-fadeInDown();
+	}@elseif $animation-type == fading-entrances/fadeInDownBig {
+		@include include-fadeInDownBig();
+	}@elseif $animation-type == fading-entrances/fadeInLeft {
+		@include include-fadeInLeft();
+	}@elseif $animation-type == fading-entrances/fadeInLeftBig {
+		@include include-fadeInLeftBig();
+	}@elseif $animation-type == fading-entrances/fadeInRight {
+		@include include-fadeInRight();
+	}@elseif $animation-type == fading-entrances/fadeInRightBig {
+		@include include-fadeInRightBig();
+	}@elseif $animation-type == fading-entrances/fadeInUp {
+		@include include-fadeInUp();
+	}@elseif $animation-type == fading-entrances/fadeInUpBig {
+		@include include-fadeInUpBig();
+	}@elseif $animation-type == fading-exits { /* fading-exits */
+		@include include-fadeOut();
+		@include include-fadeOutDown();
+		@include include-fadeOutDownBig();
+		@include include-fadeOutLeft();
+		@include include-fadeOutLeftBig();
+		@include include-fadeOutRight();
+		@include include-fadeOutRightBig();
+		@include include-fadeOutUp();
+		@include include-fadeOutUpBig();
+	}@elseif $animation-type == fading-exits/fadeIn {
+		@include include-fadeOut();
+	}@elseif $animation-type == fading-exits/fadeOutDown {
+		@include include-fadeOutDown();
+	}@elseif $animation-type == fading-exits/fadeOutDownBig {
+		@include include-fadeOutDownBig();
+	}@elseif $animation-type == fading-exits/fadeOutLeft {
+		@include include-fadeOutLeft();
+	}@elseif $animation-type == fading-exits/fadeOutLeftBig {
+		@include include-fadeOutLeftBig();
+	}@elseif $animation-type == fading-exits/fadeOutRight {
+		@include include-fadeOutRight();
+	}@elseif $animation-type == fading-exits/fadeOutRightBig {
+		@include include-fadeOutRightBig();
+	}@elseif $animation-type == fading-exits/fadeOutUp {
+		@include include-fadeOutUp();
+	}@elseif $animation-type == fading-exits/fadeOutUpBig {
+		@include include-fadeOutUpBig();
+	}@elseif $animation-type == flippers { /* flippers */
+		@include include-flip();
+		@include include-flipInX();
+		@include include-flipInY();
+		@include include-flipOutX();
+		@include include-flipOutY();
+	}@elseif $animation-type == flippers/flip {
+		@include include-flip();
+	}@elseif $animation-type == flippers/flipX {
+		@include include-flipX();
+	}@elseif $animation-type == flippers/flipY {
+		@include include-flipY();
+	}@elseif $animation-type == flippers/flipOutX {
+		@include include-flipOutX();
+	}@elseif $animation-type == flippers/flipOutY {
+		@include include-flipOutY();
+	}@elseif $animation-type == rotating-entrances { /* rotating-entrances */
+		@include include-rotateIn();
+		@include include-rotateInDownLeft();
+		@include include-rotateInDownRight();
+		@include include-rotateInUpLeft();
+		@include include-rotateInUpRight();
+	}@elseif $animation-type == rotating-entrances/rotateIn {
+		@include include-rotateIn();
+	}@elseif $animation-type == rotating-entrances/rotateInDownLeft {
+		@include include-rotateInDownLeft();
+	}@elseif $animation-type == rotating-entrances/rotateInDownRight {
+		@include include-rotateInDownRight();
+	}@elseif $animation-type == rotating-entrances/rotateInUpLeft {
+		@include include-rotateInUpLeft();
+	}@elseif $animation-type == rotating-entrances/rotateInUpRight {
+		@include include-rotateInUpRight();
+	}@elseif $animation-type == rotating-exits { /* rotating-exits */
+		@include include-rotateOut();
+		@include include-rotateOutDownLeft();
+		@include include-rotateOutDownRight();
+		@include include-rotateOutUpLeft();
+		@include include-rotateOutUpRight();
+	}@elseif $animation-type == rotating-exits/rotateOut {
+		@include include-rotateOut();
+	}@elseif $animation-type == rotating-exits/rotateOutDownLeft {
+		@include include-rotateOutDownLeft();
+	}@elseif $animation-type == rotating-exits/rotateOutDownRight {
+		@include include-rotateOutDownRight();
+	}@elseif $animation-type == rotating-exits/rotateOutUpLeft {
+		@include include-rotateOutUpLeft();
+	}@elseif $animation-type == rotating-exits/rotateOutUpRight {
+		@include include-rotateOutUpRight();
+	}@elseif $animation-type == specials { /* specials */
+		@include include-hinge();
+		@include include-rollIn();
+		@include include-rollOut();
+	}@elseif $animation-type == specials/hinge {
+		@include include-hinge();
+	}@elseif $animation-type == specials/rollIn {
+		@include include-rollIn();
+	}@elseif $animation-type == specials/rollOut {
+		@include include-rollOut();
+	}@else {
+		/* nothing */
+	}
+}

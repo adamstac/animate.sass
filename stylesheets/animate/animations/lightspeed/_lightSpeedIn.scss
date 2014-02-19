@@ -1,0 +1,41 @@
+@mixin lightSpeedIn($prefix) {
+    0% {
+        @include transform(translateX(100%) skewX(-30deg), $prefix);
+        opacity: 0;
+    }
+	60% {
+        @include transform(translateX(-20%) skewX(30deg), $prefix);
+        opacity: 1;
+	}
+	80% {
+      @include transform(translateX(00%) skewX(-15deg), $prefix);
+      opacity: 1;
+	}
+	100% {
+      @include transform(translateX(0%) skewX(0deg), $prefix);
+      opacity: 1;
+	}
+}
+
+@mixin include-lightSpeedIn {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes lightSpeedIn { @include lightSpeedIn(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes lightSpeedIn { @include lightSpeedIn(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes lightSpeedIn { @include lightSpeedIn(moz); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes lightSpeedIn { @include lightSpeedIn(o); }
+	}
+	@keyframes lightSpeedIn { @include lightSpeedIn(none); }
+
+	.lightSpeedIn {
+	  @include animation-name(lightSpeedIn);
+	  @include animation-timing-function(ease-out);
+      @include animation-duration(0.5s);
+	}
+}
+

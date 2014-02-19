@@ -1,34 +1,36 @@
 @mixin bounceOutRight($prefix) {
   0% {
-    @include transform(translateX(0), $prefix);
+    @include animate-transform(translateX(0), $prefix);
   }
   20% {
     opacity: 1;
-    @include transform(translateX(-20px), $prefix);
+    @include animate-transform(translateX(-20px), $prefix);
   }
   100% {
     opacity: 0;
-    @include transform(translateX(2000px), $prefix);
+    @include animate-transform(translateX(2000px), $prefix);
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceOutRight { @include bounceOutRight(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceOutRight { @include bounceOutRight(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceOutRight { @include bounceOutRight(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceOutRight { @include bounceOutRight(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceOutRight { @include bounceOutRight(o); }
-}
-@keyframes bounceOutRight { @include bounceOutRight(none); }
+@mixin include-bounceOutRight {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceOutRight { @include bounceOutRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceOutRight { @include bounceOutRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceOutRight { @include bounceOutRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceOutRight { @include bounceOutRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceOutRight { @include bounceOutRight(o); }
+	}
+	@keyframes bounceOutRight { @include bounceOutRight(none); }
 
-.bounceOutRight {
-  @include animation-name(bounceOutRight);
+	.bounceOutRight {
+	  @include animation-name(bounceOutRight);
+	}
 }

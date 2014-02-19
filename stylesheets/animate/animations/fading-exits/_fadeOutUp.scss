@@ -1,31 +1,34 @@
 @mixin fadeOutUp($prefix) {
   0% {
     opacity: 1;
-    @include transform(translateY(0), $prefix);
+    @include animate-transform(translateY(0), $prefix);
   }
   100% {
     opacity: 0;
-    @include transform(translateY(-20px), $prefix);
+    @include animate-transform(translateY(-20px), $prefix);
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes fadeOutUp { @include fadeOutUp(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes fadeOutUp { @include fadeOutUp(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes fadeOutUp { @include fadeOutUp(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes fadeOutUp { @include fadeOutUp(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes fadeOutUp { @include fadeOutUp(o); }
-}
-@keyframes fadeOutUp { @include fadeOutUp(none); }
+@mixin include-fadeOutUp {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes fadeOutUp { @include fadeOutUp(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes fadeOutUp { @include fadeOutUp(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes fadeOutUp { @include fadeOutUp(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeOutUp { @include fadeOutUp(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes fadeOutUp { @include fadeOutUp(o); }
+	}
+	@keyframes fadeOutUp { @include fadeOutUp(none); }
 
-.fadeOutUp {
-  @include animation-name(fadeOutUp);
+	.fadeOutUp {
+	  @include animation-name(fadeOutUp);
+	}
 }
+

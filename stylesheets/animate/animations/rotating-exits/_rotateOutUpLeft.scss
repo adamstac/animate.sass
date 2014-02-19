@@ -1,33 +1,36 @@
 @mixin rotateOutUpLeft($prefix) {
   0% {
-    @include transform-origin(left bottom, $prefix);
-    @include transform(rotate(0), $prefix);
+    @include animate-transform-origin(left bottom, $prefix);
+    @include animate-transform(rotate(0), $prefix);
     opacity: 1;
   }
   100% {
-    @include transform-origin(left bottom, $prefix);
-    @include transform(rotate(-90deg), $prefix);
+    @include animate-transform-origin(left bottom, $prefix);
+    @include animate-transform(rotate(-90deg), $prefix);
     opacity: 0;
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes rotateOutUpLeft { @include rotateOutUpLeft(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes rotateOutUpLeft { @include rotateOutUpLeft(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes rotateOutUpLeft { @include rotateOutUpLeft(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes rotateOutUpLeft { @include rotateOutUpLeft(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes rotateOutUpLeft { @include rotateOutUpLeft(o); }
-}
-@keyframes rotateOutUpLeft { @include rotateOutUpLeft(none); }
+@mixin include-rotateOutUpLeft {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes rotateOutUpLeft { @include rotateOutUpLeft(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes rotateOutUpLeft { @include rotateOutUpLeft(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes rotateOutUpLeft { @include rotateOutUpLeft(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rotateOutUpLeft { @include rotateOutUpLeft(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes rotateOutUpLeft { @include rotateOutUpLeft(o); }
+	}
+	@keyframes rotateOutUpLeft { @include rotateOutUpLeft(none); }
 
-.rotateOutUpLeft {
-  @include animation-name(rotateOutUpLeft);
+	.rotateOutUpLeft {
+	  @include animation-name(rotateOutUpLeft);
+	}
 }
+

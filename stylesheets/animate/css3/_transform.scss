@@ -1,27 +1,27 @@
-// transform - https://developer.mozilla.org/en/CSS/transform
-// none | <transform-function>
+// animate-transform - https://developer.mozilla.org/en/CSS/animate-transform
+// none | <animate-transform-function>
 
-@mixin transform($value: none, $prefix: false) {
+@mixin animate-transform($value: none, $prefix: false) {
 
   @if $prefix {
-    @include declaration(transform, $value, $prefix);
+    @include declaration(animate-transform, $value, $prefix);
   } @else {
-    @include experimental(transform, $value);
+    @include experimental(animate-transform, $value);
   }
 
 }
 
-// transform-origin - https://developer.mozilla.org/en/CSS/transform-origin
+// animate-transform-origin - https://developer.mozilla.org/en/CSS/animate-transform-origin
 // x-axis - left | center | right  | length | %
 // y-axis - top  | center | bottom | length | %
 // z-axis -                          length
 
-@mixin transform-origin($value: 50%, $prefix: false) {
+@mixin animate-transform-origin($value: 50%, $prefix: false) {
 
   @if $prefix {
-    @include declaration(transform-origin, $value, $prefix);
+    @include declaration(animate-transform-origin, $value, $prefix);
   } @else {
-    @include experimental(transform-origin, $value);
+    @include experimental(animate-transform-origin, $value);
   }
 
 }

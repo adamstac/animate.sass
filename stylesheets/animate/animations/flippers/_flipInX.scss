@@ -1,38 +1,41 @@
 @mixin flipInX($prefix) {
 	0% {
-		@include transform(perspective(400px) rotateX(90deg), $prefix);
+		@include animate-transform(perspective(400px) rotateX(90deg), $prefix);
 		opacity: 0;
 	}
 	40% {
-		@include transform(perspective(400px) rotateX(-10deg), $prefix);
+		@include animate-transform(perspective(400px) rotateX(-10deg), $prefix);
 	}
 	70% {
-		@include transform(perspective(400px) rotateX(10deg), $prefix);
+		@include animate-transform(perspective(400px) rotateX(10deg), $prefix);
 	}
 	100% {
-		@include transform(perspective(400px) rotateX(0deg), $prefix);
+		@include animate-transform(perspective(400px) rotateX(0deg), $prefix);
 		opacity: 1;
 	}
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes flipInX { @include flipInX(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes flipInX { @include flipInX(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes flipInX { @include flipInX(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes flipInX { @include flipInX(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes flipInX { @include flipInX(o); }
-}
-@keyframes flipInX { @include flipInX(none); }
+@mixin include-flipInX {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes flipInX { @include flipInX(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes flipInX { @include flipInX(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes flipInX { @include flipInX(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flipInX { @include flipInX(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes flipInX { @include flipInX(o); }
+	}
+	@keyframes flipInX { @include flipInX(none); }
 
-.flipInX {
-  @include animation-name(flipInX);
-  @include backface-visibility(visible !important);
+	.flipInX {
+	  @include animation-name(flipInX);
+	  @include backface-visibility(visible !important);
+	}
 }
+

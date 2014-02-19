@@ -1,34 +1,36 @@
 @mixin bounceOutUp($prefix) {
   0% {
-    @include transform(translateY(0), $prefix);
+    @include animate-transform(translateY(0), $prefix);
   }
   20% {
     opacity: 1;
-    @include transform(translateY(20px), $prefix);
+    @include animate-transform(translateY(20px), $prefix);
   }
   100% {
     opacity: 0;
-    @include transform(translateY(-2000px), $prefix);
+    @include animate-transform(translateY(-2000px), $prefix);
   }
 }
 
-@if $experimental-support-for-webkit {
-  @-webkit-keyframes bounceOutUp { @include bounceOutUp(webkit); }
-}
-@if $experimental-support-for-khtml {
-  @-khtml-keyframes bounceOutUp { @include bounceOutUp(khtml); }
-}
-@if $experimental-support-for-mozilla {
-  @-moz-keyframes bounceOutUp { @include bounceOutUp(moz); }
-}
-@if $experimental-support-for-microsoft {
-  @-ms-keyframes bounceOutUp { @include bounceOutUp(ms); }
-}
-@if $experimental-support-for-opera {
-  @-o-keyframes bounceOutUp { @include bounceOutUp(o); }
-}
-@keyframes bounceOutUp { @include bounceOutUp(none); }
+@mixin include-bounceOutUp {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceOutUp { @include bounceOutUp(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceOutUp { @include bounceOutUp(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceOutUp { @include bounceOutUp(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceOutUp { @include bounceOutUp(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceOutUp { @include bounceOutUp(o); }
+	}
+	@keyframes bounceOutUp { @include bounceOutUp(none); }
 
-.bounceOutUp {
-  @include animation-name(bounceOutUp);
+	.bounceOutUp {
+	  @include animation-name(bounceOutUp);
+	}
 }
