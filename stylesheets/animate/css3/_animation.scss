@@ -53,7 +53,7 @@
 // Spec - http://www.w3.org/TR/css3-animations/#animation
 // Values: name duration timing-function delay iteration-count direction
 
-@mixin animation(
+@mixin animate-animation(
 
   $name: fadeIn,              // none | keyframe at-rule name
   $duration: 1s,              // <time>
