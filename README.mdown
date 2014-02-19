@@ -1,27 +1,58 @@
-# My update    
+# Animate.sass re-imagined   
 ##### Refer to http://daneden.me/animate/ to view animations
 ----
 
-I have a little problem with the original method for my own usage, so I decided to fixed it a little bit. Original code was made with import. I modified the "import thing" to mixins. Here's how it's work:    
+Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
 
-`@import "animate/_shared";`   
-`@import "animate/_animations";`    
+The core of Animate.sass, despite being named "dot sass", is written in [SCSS](http://en.wikipedia.org/wiki/Scss).
 
-then    
+This is a forked version of animate.sass, updated to v2.1 of animate.css, and leveraging techniques to minimize css bloat. The standard library is over 3400+ lines of code unminified, using sass, you only have to use the portions which make sense for your project.
 
-`@include animations(fading-entrances);` - entrances animations family     
-or    
-`@include animations(fading-entrances/fadeInRight);` - specific animation          
+----
 
-    
-The output will be the same. (prefix keyframes animations + animations class. Ex: .bounceIn)    
+Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
 
-If you want to keep the original code:    
+The core of Animate.sass, despite being named "dot sass", is written in [SCSS](http://en.wikipedia.org/wiki/Scss). Don't hate.
 
-`@import "animate/_shared";`   
-`@import "animate/_animations-imports";`    
+## Installation
 
-### Animations family    
+1. `gem install animate-sass`
+2. Add `require 'animate-sass'` in Compass's `config.rb` file
+3. Then `@import animate.sass` at the top of your main sass file.
+
+## Usage
+
+Here's how it works:    
+
+1. include the keyframes you want to use in your code. 
+    Note: Animation keyframes cannot be nested, they must be at the base level of your sass file.   
+
+    Include the entire entrances animations family
+    ```
+    @include animation-keyframes(fading-entrances); 
+    ```
+    Or include just the fadeInRight keyframe 
+    ```  
+    @include animation-keyframes(fading-entrances/fadeInRight);
+    ```
+
+2. use the animation mixin to include the animation in your css.
+```
+.my-class {
+    @include animations(fadeInRight);
+}
+```
+#### Example
+
+    This example will attach the animate.css keyframes for the fadeInRight animation inside the class 'my-class'.
+    ```
+    @include animation-keyframes(fading-entrances/fadeInRight);
+    .my-class {
+        @include animations(fadeInRight);
+    }
+    ```
+
+### Animation families    
 
 `attention-seekers`    
 `bouncing-entrances`    
@@ -29,13 +60,15 @@ If you want to keep the original code:
 `fading-entrances`   
 `fading-exits`   
 `flippers`   
+`lightspeed`   
 `rotating-entrances`   
 `rotating-exits`   
+`sliders`   
 `specials`    
 
 ###Single animation    
 
-#### attention-seeker
+#### attention-seekers
 `attention-seekers/bounce`   
 `attention-seekers/flash`   
 `attention-seekers/pulse`   
@@ -99,6 +132,12 @@ If you want to keep the original code:
 
 ---
 
+#### lightspeed    
+`lightspeed/lightSpeedIn`   
+`lightspeed/lightSpeedOut`          
+
+---
+
 #### rotating-entrances    
 `rotating-entrances/rotateIn`   
 `rotating-entrances/rotateInDownLeft`   
@@ -117,51 +156,23 @@ If you want to keep the original code:
 
 ---
 
+#### sliders    
+`sliders/slideInDown`   
+`sliders/slideInLeft`   
+`sliders/slideInRight`   
+`sliders/slideOutUp`   
+`sliders/slideOutLeft`   
+`sliders/slideOutRight`
+
+---
+
 #### specials    
 `specials/hinge`   
 `specials/rollIn`   
-`specials/rollOut`    
+`specials/rollOut` 
 
-----
-# adamstac
+---
 
-----
-# Animate.sass
-
-Animate.sass is a Sass and Compass CSS animation library for WebKit, Firefox and beyond based on the work being done by [Dan Eden](https://github.com/daneden) in [Animate.css](http://daneden.me/animate/).
-
-The core of Animate.sass, despite being named "dot sass", is written in [SCSS](http://en.wikipedia.org/wiki/Scss). Don't hate.
-
-## Installation
-
-1. `gem install animate-sass`
-2. Add `require 'animate-sass'` in Compass's `config.rb` file
-3. Then `@import animate.sass` (all animations)
-
-## Usage
-
-The usage is simple, `@import animate.sass` (loads all animations) and have fun. All Animate.css animations are supported.
-
-Usage examples and documentation are in the works, but until then, check out the test project for help. Animate.sass is still in development and is not intended for production UNLESS you know what you are doing. Feedback and contributions are appreciated.
-
-### Animations, a la carte ...
-
-You may not want to load the full stack of animations from animate.sass, which emits over 5000+ lines of CSS. Instead you would like to pull in just a few animations or even a particular animation family. If that's the case, here's how to do that.
-
-Rather than `@import animate.sass` (all animations), do this ...
-
-First you need to import what's shared between all animations, `@import animate/shared`. Then you'll be able to import a full animation family or individual animations.
-
-For example, if you wanted to use all the animations from the attention seekers animation family, and a few from the flippers animation family, here's what you'd do.
-
-    // Animate.sass shared stuffs
-    @import animate/shared
-    
-    // Animate.sass animation families and individual animations
-    @import animate/animations/attention-seekers
-    @import animate/animations/flippers/flip
-    @import animate/animations/flippers/flipInX
-    @import animate/animations/flippers/flipOutX
 
 ## Credits and special thanks
 
@@ -169,11 +180,11 @@ Huge thanks to [Dan Eden](https://github.com/daneden) on his project [Animate.cs
 
 Special thanks needs to also go out to [Thoughtbot](http://thoughtbot.com/) and [Bourbon](https://github.com/thoughtbot/bourbon). I borrowed some of their CSS3 animation mixins and "tailor fit" them to my needs.
 
-Also, I want to thank [theCSSguru](https://twitter.com/theCSSguru) for kickstarting a Sass port of Animate.css. He has [a page out there](http://thecssguru.freeiz.com/animate/) linking to a simple Sass conversion of Animate.css, but I wanted to do a lot more with it for the Sass community. Since it wasn't hosted on GitHub, I took the liberty to start Animate.sass and begin carving it out.
+Also, I want to thank [theCSSguru](https://twitter.com/theCSSguru), [adamstac](https://github.com/adamstac), and [polikin](https://github.com/polikin) for earlier versions and contributions of this framework.
 
 ## License
 
-Copyright (c) 2011 Adam Stacoviak
+Copyright (c) 2013 Joshua Ellinger
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

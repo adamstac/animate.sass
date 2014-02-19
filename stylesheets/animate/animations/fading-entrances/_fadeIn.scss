@@ -13,9 +13,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeIn { @include fadeIn; }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes fadeIn { @include fadeIn; }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeIn { @include fadeIn; }
 	}

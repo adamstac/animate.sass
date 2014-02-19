@@ -19,9 +19,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeOutRight { @include fadeOutRight(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes fadeOutRight { @include fadeOutRight(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeOutRight { @include fadeOutRight(o); }
 	}

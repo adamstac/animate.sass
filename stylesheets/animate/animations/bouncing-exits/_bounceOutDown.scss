@@ -22,9 +22,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes bounceOutDown { @include bounceOutDown(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes bounceOutDown { @include bounceOutDown(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes bounceOutDown { @include bounceOutDown(o); }
 	}

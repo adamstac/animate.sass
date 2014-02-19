@@ -19,9 +19,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeInLeft { @include fadeInLeft(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes fadeInLeft { @include fadeInLeft(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeInLeft { @include fadeInLeft(o); }
 	}

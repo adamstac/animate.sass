@@ -21,9 +21,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes rotateInUpRight { @include rotateInUpRight(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes rotateInUpRight { @include rotateInUpRight(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes rotateInUpRight { @include rotateInUpRight(o); }
 	}

@@ -21,9 +21,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes rotateOutUpLeft { @include rotateOutUpLeft(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes rotateOutUpLeft { @include rotateOutUpLeft(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes rotateOutUpLeft { @include rotateOutUpLeft(o); }
 	}

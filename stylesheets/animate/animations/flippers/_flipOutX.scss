@@ -19,9 +19,6 @@
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes flipOutX { @include flipOutX(moz); }
 	}
-	@if $experimental-support-for-microsoft {
-	  @-ms-keyframes flipOutX { @include flipOutX(ms); }
-	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes flipOutX { @include flipOutX(o); }
 	}

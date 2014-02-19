@@ -3,7 +3,7 @@ Compass::Frameworks.register("animate-sass", :path => "#{File.dirname(__FILE__)}
 
 module AnimateSass
   
-  VERSION = "0.1.1"
-  DATE = "2011-11-26"
+  VERSION = "0.2.0"
+  DATE = "2013-10-20"
 
 end

@@ -1,0 +1,30 @@
+@mixin slideInLeft($prefix) {
+    0% {
+        @include transform(translateX(-2000px), $prefix);
+        opacity: 0;
+    }
+	100% {
+      @include transform(translateX(0), $prefix);
+	}
+}
+
+@mixin include-slideInLeft {
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes slideInLeft { @include slideInLeft(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes slideInLeft { @include slideInLeft(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes slideInLeft { @include slideInLeft(moz); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes slideInLeft { @include slideInLeft(o); }
+	}
+	@keyframes slideInLeft { @include slideInLeft(none); }
+
+	.slideInLeft {
+	  @include animation-name(slideInLeft);
+	}
+}
+
