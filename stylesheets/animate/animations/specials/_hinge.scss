@@ -1,27 +1,27 @@
 @mixin hinge($prefix) {
 	0% {
     @include animation-timing-function(ease-in-out, $prefix);
-    @include transform(rotate(0), $prefix);
-    @include transform-origin(top left, $prefix);
+    @include animate-transform(rotate(0), $prefix);
+    @include animate-transform-origin(top left, $prefix);
   }	
 	20%, 60% {
 	  @include animation-timing-function(ease-in-out, $prefix);
-	  @include transform(rotate(80deg), $prefix);
-	  @include transform-origin(top left, $prefix);
+	  @include animate-transform(rotate(80deg), $prefix);
+	  @include animate-transform-origin(top left, $prefix);
 	}
 	40% {
-	  @include transform(rotate(60deg), $prefix);
-	  @include transform-origin(top left, $prefix);
+	  @include animate-transform(rotate(60deg), $prefix);
+	  @include animate-transform-origin(top left, $prefix);
 	  @include animation-timing-function(ease-in-out, $prefix);
 	}
 	80% {
 	  opacity: 1;
 	  @include animation-timing-function(ease-in-out, $prefix);
-	  @include transform(rotate(60deg) translateY(0), $prefix);
-	  @include transform-origin(top left, $prefix);
+	  @include animate-transform(rotate(60deg) translateY(0), $prefix);
+	  @include animate-transform-origin(top left, $prefix);
 	}
 	100% {
-	  @include transform(translateY(700px), $prefix);
+	  @include animate-transform(translateY(700px), $prefix);
 	  opacity: 0;
 	}
 }
@@ -35,6 +35,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes hinge { @include hinge(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes hinge { @include hinge(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes hinge { @include hinge(o); }

@@ -1,36 +1,39 @@
 @mixin bounceInRight($prefix) {
   0% {
     opacity: 0;
-    @include transform(translateX(2000px), $prefix);
+    @include animate-transform(translateX(2000px), $prefix);
   }
   60% {
     opacity: 1;
-    @include transform(translateX(-30px), $prefix);
+    @include animate-transform(translateX(-30px), $prefix);
   }
   80% {
-    @include transform(translateX(10px), $prefix);
+    @include animate-transform(translateX(10px), $prefix);
   }
   100% {
-    @include transform(translateX(0), $prefix);
+    @include animate-transform(translateX(0), $prefix);
   }
 }
 
 @mixin include-bounceInRight {
-    @if $experimental-support-for-webkit {
-      @-webkit-keyframes bounceInRight { @include bounceInRight(webkit); }
-    }
-    @if $experimental-support-for-khtml {
-      @-khtml-keyframes bounceInRight { @include bounceInRight(khtml); }
-    }
-    @if $experimental-support-for-mozilla {
-      @-moz-keyframes bounceInRight { @include bounceInRight(moz); }
-    }
-    @if $experimental-support-for-opera {
-      @-o-keyframes bounceInRight { @include bounceInRight(o); }
-    }
-    @keyframes bounceInRight { @include bounceInRight(none); }
+	@if $experimental-support-for-webkit {
+	  @-webkit-keyframes bounceInRight { @include bounceInRight(webkit); }
+	}
+	@if $experimental-support-for-khtml {
+	  @-khtml-keyframes bounceInRight { @include bounceInRight(khtml); }
+	}
+	@if $experimental-support-for-mozilla {
+	  @-moz-keyframes bounceInRight { @include bounceInRight(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceInRight { @include bounceInRight(ms); }
+	}
+	@if $experimental-support-for-opera {
+	  @-o-keyframes bounceInRight { @include bounceInRight(o); }
+	}
+	@keyframes bounceInRight { @include bounceInRight(none); }
 
-    .bounceInRight {
-      @include animation-name(bounceInRight);
-    }
+	.bounceInRight {
+	  @include animation-name(bounceInRight);
+	}
 }

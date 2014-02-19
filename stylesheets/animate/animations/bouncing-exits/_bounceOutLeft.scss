@@ -1,14 +1,14 @@
 @mixin bounceOutLeft($prefix) {
   0% {
-    @include transform(translateX(0), $prefix);
+    @include animate-transform(translateX(0), $prefix);
   }
   20% {
     opacity: 1;
-    @include transform(translateX(20px), $prefix);
+    @include animate-transform(translateX(20px), $prefix);
   }
   100% {
     opacity: 0;
-    @include transform(translateX(-2000px), $prefix);
+    @include animate-transform(translateX(-2000px), $prefix);
   }
 }
 
@@ -21,6 +21,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes bounceOutLeft { @include bounceOutLeft(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceOutLeft { @include bounceOutLeft(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes bounceOutLeft { @include bounceOutLeft(o); }

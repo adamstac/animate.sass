@@ -1,9 +1,9 @@
 // Originally authored by Nick Pettit - https://github.com/nickpettit/glide
 
 @mixin pulse($prefix) {
-  0%   { @include transform(scale(1), $prefix); }
-  50%  { @include transform(scale(1.1), $prefix); }
-  100% { @include transform(scale(1), $prefix); }
+  0%   { @include animate-transform(scale(1), $prefix); }
+  50%  { @include animate-transform(scale(1.1), $prefix); }
+  100% { @include animate-transform(scale(1), $prefix); }
 }
 
 @mixin include-pulse {
@@ -15,6 +15,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes pulse { @include pulse(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes pulse { @include pulse(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes pulse { @include pulse(o); }

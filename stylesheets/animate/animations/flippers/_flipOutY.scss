@@ -1,10 +1,10 @@
 @mixin flipOutY($prefix) {
 	0% {
-		@include transform(perspective(400px) rotateY(0deg), $prefix);
+		@include animate-transform(perspective(400px) rotateY(0deg), $prefix);
 		opacity: 1;
 	}
 	100% {
-		@include transform(perspective(400px) rotateY(90deg), $prefix);
+		@include animate-transform(perspective(400px) rotateY(90deg), $prefix);
 		opacity: 0;
 	}
 }
@@ -18,6 +18,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes flipOutY { @include flipOutY(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flipOutY { @include flipOutY(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes flipOutY { @include flipOutY(o); }

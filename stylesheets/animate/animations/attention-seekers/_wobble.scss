@@ -1,13 +1,13 @@
 // Originally authored by Nick Pettit - https://github.com/nickpettit/glide
 
 @mixin wobble($prefix) {
-  0%   { @include transform(translateX(0%), $prefix); }
-  15%  { @include transform(translateX(-25%) rotate(-5deg), $prefix); }
-  30%  { @include transform(translateX(20%) rotate(3deg), $prefix); }
-  45%  { @include transform(translateX(-15%) rotate(-3deg), $prefix); }
-  60%  { @include transform(translateX(10%) rotate(2deg), $prefix); }
-  75%  { @include transform(translateX(-5%) rotate(-1deg), $prefix); }
-  100% { @include transform(translateX(0%), $prefix); }
+  0%   { @include animate-transform(translateX(0%), $prefix); }
+  15%  { @include animate-transform(translateX(-25%) rotate(-5deg), $prefix); }
+  30%  { @include animate-transform(translateX(20%) rotate(3deg), $prefix); }
+  45%  { @include animate-transform(translateX(-15%) rotate(-3deg), $prefix); }
+  60%  { @include animate-transform(translateX(10%) rotate(2deg), $prefix); }
+  75%  { @include animate-transform(translateX(-5%) rotate(-1deg), $prefix); }
+  100% { @include animate-transform(translateX(0%), $prefix); }
 }
 
 @mixin include-wobble {
@@ -19,6 +19,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes wobble { @include wobble(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes wobble { @include wobble(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes wobble { @include wobble(o); }

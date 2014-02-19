@@ -3,11 +3,11 @@
 @mixin rollOut($prefix) {
 	0% {
 	  opacity: 1;
-		@include transform(translateX(0px) rotate(0deg), $prefix);
+		@include animate-transform(translateX(0px) rotate(0deg), $prefix);
 	}
 	100% {
 	  opacity: 0;
-		@include transform(translateX(100%) rotate(120deg), $prefix);
+		@include animate-transform(translateX(100%) rotate(120deg), $prefix);
 	}
 }
 
@@ -20,6 +20,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes rollOut { @include rollOut(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes rollOut { @include rollOut(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes rollOut { @include rollOut(o); }

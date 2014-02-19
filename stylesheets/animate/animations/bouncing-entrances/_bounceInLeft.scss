@@ -1,17 +1,17 @@
 @mixin bounceInLeft($prefix) {
   0% {
     opacity: 0;
-    @include transform(translateX(-2000px), $prefix);
+    @include animate-transform(translateX(-2000px), $prefix);
   }
   60% {
     opacity: 1;
-    @include transform(translateX(30px), $prefix);
+    @include animate-transform(translateX(30px), $prefix);
   }
   80% {
-    @include transform(translateX(-10px), $prefix);
+    @include animate-transform(translateX(-10px), $prefix);
   }
   100% {
-    @include transform(translateX(0), $prefix);
+    @include animate-transform(translateX(0), $prefix);
   }
 }
 
@@ -24,6 +24,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes bounceInLeft { @include bounceInLeft(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes bounceInLeft { @include bounceInLeft(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes bounceInLeft { @include bounceInLeft(o); }

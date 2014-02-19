@@ -2,10 +2,6 @@
 // flash bounce shake tada swing wobble pulse
 @import "animations/attention-seekers";
 
-// Flippers
-// flip flipInX flipOutX flipInY flipOutY
-@import "animations/flippers";
-
 // Fading entrances
 // fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig
 @import "animations/fading-entrances";
@@ -13,10 +9,6 @@
 // Fading exits
 // fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig
 @import "animations/fading-exits";
-
-// Sliders
-// slideInDown slideInLeft slideInRight slideOutUp slideOutLeft slideOutRight
-@import "animations/sliders";
 
 // Bouncing entrances
 // bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight
@@ -34,16 +26,15 @@
 // rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight
 @import "animations/rotating-exits";
 
-// Lightspeed
-// lightSpeedIn lightSpeedOut
-@import "animations/lightspeed";
-
 // Specials
 // hinge rollIn rollOut
 @import "animations/specials";
 
-// Creates the animation keyframes and base class
-@mixin animation-keyframes($animation-type:null) {
+// Flippers
+// flip flipInX flipOutX flipInY flipOutY
+@import "animations/flippers";
+
+@mixin animations($animation-type:null) {
 	@if $animation-type == attention-seekers {
 		@include include-bounce();
 		@include include-flash();
@@ -52,53 +43,53 @@
 		@include include-swing();
 		@include include-tada();
 		@include include-wobble();
-	}@else if $animation-type == attention-seekers/bounce { /* attention-seekers */
+	}@elseif $animation-type == attention-seekers/bounce { /* attention-seekers */
 		@include include-bounce();
-	}@else if $animation-type == attention-seekers/flash {
+	}@elseif $animation-type == attention-seekers/flash {
 		@include include-flash();
-	}@else if $animation-type == attention-seekers/pulse {
+	}@elseif $animation-type == attention-seekers/pulse {
 		@include include-pulse();
-	}@else if $animation-type == attention-seekers/shake {
+	}@elseif $animation-type == attention-seekers/shake {
 		@include include-shake();
-	}@else if $animation-type == attention-seekers/swing {
+	}@elseif $animation-type == attention-seekers/swing {
 		@include include-swing();
-	}@else if $animation-type == attention-seekers/tada {
+	}@elseif $animation-type == attention-seekers/tada {
 		@include include-tada();
-	}@else if $animation-type == attention-seekers/wobble {
+	}@elseif $animation-type == attention-seekers/wobble {
 		@include include-wobble();
-	}@else if $animation-type == bouncing-entrances { /* bouncing-entrances */
+	}@elseif $animation-type == bouncing-entrances { /* bouncing-entrances */
 		@include include-bounceIn();
 		@include include-bounceInDown();
 		@include include-bounceInLeft();
 		@include include-bounceInRight();
 		@include include-bounceInUp();
-	}@else if $animation-type == bouncing-entrances/bounceIn {
+	}@elseif $animation-type == bouncing-entrances/bounceIn {
 		@include include-bounceIn();
-	}@else if $animation-type == bouncing-entrances/bounceInDown {
+	}@elseif $animation-type == bouncing-entrances/bounceInDown {
 		@include include-bounceInDown();
-	}@else if $animation-type == bouncing-entrances/bounceInLeft {
+	}@elseif $animation-type == bouncing-entrances/bounceInLeft {
 		@include include-bounceInLeft();
-	}@else if $animation-type == bouncing-entrances/bounceInRight {
+	}@elseif $animation-type == bouncing-entrances/bounceInRight {
 		@include include-bounceInRight();
-	}@else if $animation-type == bouncing-entrances/bounceInUp {
+	}@elseif $animation-type == bouncing-entrances/bounceInUp {
 		@include include-bounceInUp();
-	}@else if $animation-type == bouncing-exits { /* bouncing-exits */
+	}@elseif $animation-type == bouncing-exits { /* bouncing-exits */
 		@include include-bounceOut();
 		@include include-bounceOutDown();
 		@include include-bounceOutLeft();
 		@include include-bounceOutRight();
 		@include include-bounceOutUp();
-	}@else if $animation-type == bouncing-exits/bounceOut {
+	}@elseif $animation-type == bouncing-exits/bounceOut {
 		@include include-bounceOut();
-	}@else if $animation-type == bouncing-exits/bounceOutDown {
+	}@elseif $animation-type == bouncing-exits/bounceOutDown {
 		@include include-bounceOutDown();
-	}@else if $animation-type == bouncing-exits/bounceOutLeft {
+	}@elseif $animation-type == bouncing-exits/bounceOutLeft {
 		@include include-bounceOutLeft();
-	}@else if $animation-type == bouncing-exits/bounceOutRight {
+	}@elseif $animation-type == bouncing-exits/bounceOutRight {
 		@include include-bounceOutRight();
-	}@else if $animation-type == bouncing-exits/bounceOutUp {
+	}@elseif $animation-type == bouncing-exits/bounceOutUp {
 		@include include-bounceOutUp();
-	}@else if $animation-type == fading-entrances { /* fading-entrances */
+	}@elseif $animation-type == fading-entrances { /* fading-entrances */
 		@include include-fadeIn();
 		@include include-fadeInDown();
 		@include include-fadeInDownBig();
@@ -108,25 +99,25 @@
 		@include include-fadeInRightBig();
 		@include include-fadeInUp();
 		@include include-fadeInUpBig();
-	}@else if $animation-type == fading-entrances/fadeIn {
+	}@elseif $animation-type == fading-entrances/fadeIn {
 		@include include-fadeIn();
-	}@else if $animation-type == fading-entrances/fadeInDown {
+	}@elseif $animation-type == fading-entrances/fadeInDown {
 		@include include-fadeInDown();
-	}@else if $animation-type == fading-entrances/fadeInDownBig {
+	}@elseif $animation-type == fading-entrances/fadeInDownBig {
 		@include include-fadeInDownBig();
-	}@else if $animation-type == fading-entrances/fadeInLeft {
+	}@elseif $animation-type == fading-entrances/fadeInLeft {
 		@include include-fadeInLeft();
-	}@else if $animation-type == fading-entrances/fadeInLeftBig {
+	}@elseif $animation-type == fading-entrances/fadeInLeftBig {
 		@include include-fadeInLeftBig();
-	}@else if $animation-type == fading-entrances/fadeInRight {
+	}@elseif $animation-type == fading-entrances/fadeInRight {
 		@include include-fadeInRight();
-	}@else if $animation-type == fading-entrances/fadeInRightBig {
+	}@elseif $animation-type == fading-entrances/fadeInRightBig {
 		@include include-fadeInRightBig();
-	}@else if $animation-type == fading-entrances/fadeInUp {
+	}@elseif $animation-type == fading-entrances/fadeInUp {
 		@include include-fadeInUp();
-	}@else if $animation-type == fading-entrances/fadeInUpBig {
+	}@elseif $animation-type == fading-entrances/fadeInUpBig {
 		@include include-fadeInUpBig();
-	}@else if $animation-type == fading-exits { /* fading-exits */
+	}@elseif $animation-type == fading-exits { /* fading-exits */
 		@include include-fadeOut();
 		@include include-fadeOutDown();
 		@include include-fadeOutDownBig();
@@ -136,171 +127,83 @@
 		@include include-fadeOutRightBig();
 		@include include-fadeOutUp();
 		@include include-fadeOutUpBig();
-	}@else if $animation-type == fading-exits/fadeIn {
+	}@elseif $animation-type == fading-exits/fadeIn {
 		@include include-fadeOut();
-	}@else if $animation-type == fading-exits/fadeOutDown {
+	}@elseif $animation-type == fading-exits/fadeOutDown {
 		@include include-fadeOutDown();
-	}@else if $animation-type == fading-exits/fadeOutDownBig {
+	}@elseif $animation-type == fading-exits/fadeOutDownBig {
 		@include include-fadeOutDownBig();
-	}@else if $animation-type == fading-exits/fadeOutLeft {
+	}@elseif $animation-type == fading-exits/fadeOutLeft {
 		@include include-fadeOutLeft();
-	}@else if $animation-type == fading-exits/fadeOutLeftBig {
+	}@elseif $animation-type == fading-exits/fadeOutLeftBig {
 		@include include-fadeOutLeftBig();
-	}@else if $animation-type == fading-exits/fadeOutRight {
+	}@elseif $animation-type == fading-exits/fadeOutRight {
 		@include include-fadeOutRight();
-	}@else if $animation-type == fading-exits/fadeOutRightBig {
+	}@elseif $animation-type == fading-exits/fadeOutRightBig {
 		@include include-fadeOutRightBig();
-	}@else if $animation-type == fading-exits/fadeOutUp {
+	}@elseif $animation-type == fading-exits/fadeOutUp {
 		@include include-fadeOutUp();
-	}@else if $animation-type == fading-exits/fadeOutUpBig {
+	}@elseif $animation-type == fading-exits/fadeOutUpBig {
 		@include include-fadeOutUpBig();
-	}@else if $animation-type == flippers { /* flippers */
+	}@elseif $animation-type == flippers { /* flippers */
 		@include include-flip();
 		@include include-flipInX();
 		@include include-flipInY();
 		@include include-flipOutX();
 		@include include-flipOutY();
-	}@else if $animation-type == flippers/flip {
+	}@elseif $animation-type == flippers/flip {
 		@include include-flip();
-	}@else if $animation-type == flippers/flipInX {
-		@include include-flipInX();
-	}@else if $animation-type == flippers/flipInY {
-		@include include-flipInY();
-	}@else if $animation-type == flippers/flipOutX {
+	}@elseif $animation-type == flippers/flipX {
+		@include include-flipX();
+	}@elseif $animation-type == flippers/flipY {
+		@include include-flipY();
+	}@elseif $animation-type == flippers/flipOutX {
 		@include include-flipOutX();
-	}@else if $animation-type == flippers/flipOutY {
+	}@elseif $animation-type == flippers/flipOutY {
 		@include include-flipOutY();
-	}@else if $animation-type == rotating-entrances { /* rotating-entrances */
+	}@elseif $animation-type == rotating-entrances { /* rotating-entrances */
 		@include include-rotateIn();
 		@include include-rotateInDownLeft();
 		@include include-rotateInDownRight();
 		@include include-rotateInUpLeft();
 		@include include-rotateInUpRight();
-	}@else if $animation-type == rotating-entrances/rotateIn {
+	}@elseif $animation-type == rotating-entrances/rotateIn {
 		@include include-rotateIn();
-	}@else if $animation-type == rotating-entrances/rotateInDownLeft {
+	}@elseif $animation-type == rotating-entrances/rotateInDownLeft {
 		@include include-rotateInDownLeft();
-	}@else if $animation-type == rotating-entrances/rotateInDownRight {
+	}@elseif $animation-type == rotating-entrances/rotateInDownRight {
 		@include include-rotateInDownRight();
-	}@else if $animation-type == rotating-entrances/rotateInUpLeft {
+	}@elseif $animation-type == rotating-entrances/rotateInUpLeft {
 		@include include-rotateInUpLeft();
-	}@else if $animation-type == rotating-entrances/rotateInUpRight {
+	}@elseif $animation-type == rotating-entrances/rotateInUpRight {
 		@include include-rotateInUpRight();
-	}@else if $animation-type == rotating-exits { /* rotating-exits */
+	}@elseif $animation-type == rotating-exits { /* rotating-exits */
 		@include include-rotateOut();
 		@include include-rotateOutDownLeft();
 		@include include-rotateOutDownRight();
 		@include include-rotateOutUpLeft();
 		@include include-rotateOutUpRight();
-	}@else if $animation-type == rotating-exits/rotateOut {
+	}@elseif $animation-type == rotating-exits/rotateOut {
 		@include include-rotateOut();
-	}@else if $animation-type == rotating-exits/rotateOutDownLeft {
+	}@elseif $animation-type == rotating-exits/rotateOutDownLeft {
 		@include include-rotateOutDownLeft();
-	}@else if $animation-type == rotating-exits/rotateOutDownRight {
+	}@elseif $animation-type == rotating-exits/rotateOutDownRight {
 		@include include-rotateOutDownRight();
-	}@else if $animation-type == rotating-exits/rotateOutUpLeft {
+	}@elseif $animation-type == rotating-exits/rotateOutUpLeft {
 		@include include-rotateOutUpLeft();
-	}@else if $animation-type == rotating-exits/rotateOutUpRight {
+	}@elseif $animation-type == rotating-exits/rotateOutUpRight {
 		@include include-rotateOutUpRight();
-	}@else if $animation-type == specials { /* specials */
+	}@elseif $animation-type == specials { /* specials */
 		@include include-hinge();
 		@include include-rollIn();
 		@include include-rollOut();
-	}@else if $animation-type == specials/hinge {
+	}@elseif $animation-type == specials/hinge {
 		@include include-hinge();
-	}@else if $animation-type == specials/rollIn {
+	}@elseif $animation-type == specials/rollIn {
 		@include include-rollIn();
-	}@else if $animation-type == specials/rollOut {
+	}@elseif $animation-type == specials/rollOut {
 		@include include-rollOut();
-    }@else if $animation-type == sliders {
-      @include include-slideInDown();
-      @include include-slideInLeft();
-      @include include-slideInRight();
-      @include include-slideOutUp();
-      @include include-slideOutLeft();
-      @include include-slideOutRight();
-    }@else if $animation-type == sliders/slideInDown {
-      @include include-slideInDown();
-    }@else if $animation-type == sliders/slideInLeft {
-      @include include-slideInLeft();
-    }@else if $animation-type == sliders/slideInRight {
-      @include include-slideInRight();
-    }@else if $animation-type == sliders/slideOutUp {
-      @include include-slideOutUp();
-    }@else if $animation-type == sliders/slideOutLeft {
-      @include include-slideOutLeft();
-    }@else if $animation-type == sliders/slideOutRight {
-      @include include-slideOutRight();
-    }@else if $animation-type == lightspeed {
-      @include include-lightSpeedIn();
-      @include include-lightSpeedOut();
-    }@else if $animation-type == lightspeed/lightSpeedIn {
-      @include include-lightSpeedIn();
-    }@else if $animation-type == lightspeed/lightSpeedOut {
-      @include include-lightSpeedOut();
 	}@else {
 		/* nothing */
 	}
-}
-
-@mixin animations($name: false) {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration:1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode:both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  @if $name {
-    @if $name == flip {
-      @include backface-visibility(visible !important);
-    }
-    @else if $name == flipInX {
-      @include backface-visibility(visible !important);
-    }
-    @else if $name == flipOutX {
-      @include backface-visibility(visible !important);
-    }
-    @else if $name == flipInY {
-      @include backface-visibility(visible !important);
-    }
-    @else if $name == flipOutY {
-      -webkit-backface-visibility: visible !important;
-      -moz-backface-visibility: visible !important;
-      -o-backface-visibility: visible !important;
-      backface-visibility: visible !important;
-    }
-    @else if $name == swing {
-      -webkit-transform-origin: top center;
-      -moz-transform-origin: top center;
-      -o-transform-origin: top center;
-      transform-origin: top center;
-    }
-    @else if $name == hinge {
-      -webkit-animation-duration: 2s;
-      -moz-animation-duration: 2s;
-      -o-animation-duration: 2s;
-      animation-duration: 2s;
-    }
-    @else if $name == lightSpeedIn {
-      -webkit-animation-timing-function: ease-out;
-      -moz-animation-timing-function: ease-out;
-      -o-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-      -webkit-animation-duration: 0.5s;
-      -moz-animation-duration: 0.5s;
-      -o-animation-duration: 0.5s;
-      animation-duration: 0.5s;
-    }
-    @else if $name == lightSpeedOut {
-      -webkit-animation-duration: 0.25s;
-      -moz-animation-duration: 0.25s;
-      -o-animation-duration: 0.25s;
-      animation-duration: 0.25s;
-    }
-    @include animation-name($name);
-  }
 }

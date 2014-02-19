@@ -1,11 +1,11 @@
 @mixin fadeOutRightBig($prefix) {
   0% {
     opacity: 1;
-    @include transform(translateX(0), $prefix);
+    @include animate-transform(translateX(0), $prefix);
   }
   100% {
     opacity: 0;
-    @include transform(translateX(2000px), $prefix);
+    @include animate-transform(translateX(2000px), $prefix);
   }
 }
 
@@ -18,6 +18,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes fadeOutRightBig { @include fadeOutRightBig(moz); }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes fadeOutRightBig { @include fadeOutRightBig(ms); }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes fadeOutRightBig { @include fadeOutRightBig(o); }

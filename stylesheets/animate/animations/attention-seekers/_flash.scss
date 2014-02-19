@@ -1,6 +1,9 @@
 @mixin flash {
-  0%, 50%, 100%   { opacity: 1; }
-  25%, 75%  { opacity: 0; }
+  0%   { opacity: 1; }
+  25%  { opacity: 0; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @mixin include-flash {
@@ -12,6 +15,9 @@
 	}
 	@if $experimental-support-for-mozilla {
 	  @-moz-keyframes flash { @include flash; }
+	}
+	@if $experimental-support-for-microsoft {
+	  @-ms-keyframes flash { @include flash; }
 	}
 	@if $experimental-support-for-opera {
 	  @-o-keyframes flash { @include flash; }
